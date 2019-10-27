@@ -13,9 +13,9 @@
     }
   },
 
-  "plugins": ["react"],
+  "plugins": ["react", "prettier"],
 
-  "extends": ["standard-jsx"],
+  "extends": ["standard-jsx", "prettier"],
 
   "rules": {
     "react/jsx-no-bind": [
