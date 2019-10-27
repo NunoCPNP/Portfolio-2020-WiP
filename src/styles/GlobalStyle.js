@@ -5,6 +5,8 @@ const GlobalStyle = () => {
   return (
     <Global
       styles={css`
+        @import url('https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap');
+        
         *,
         *::after,
         *::before {
@@ -20,7 +22,7 @@ const GlobalStyle = () => {
 
         body {
           box-sizing: border-box;
-          font-family: sans-serif;
+          font-family: 'Lato', sans-serif;
           background: rgb(59, 59, 79);
         }
       `}
