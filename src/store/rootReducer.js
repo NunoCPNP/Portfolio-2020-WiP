@@ -1,5 +1,7 @@
 import { combineReducers } from 'redux'
 
-const rootReducer = combineReducers({})
+import sanityProjects from './sanityProjects/reducers'
+
+const rootReducer = combineReducers({ sanityProjects })
 
 export default rootReducer
