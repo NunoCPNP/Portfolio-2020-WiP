@@ -1,16 +1,16 @@
-import { GET_DATA } from './actions'
+import { GET_PROJECTS } from './actions'
 
 const initialState = {
-  data: []
+  projects: []
 }
 
 export default function (state = initialState, action) {
   const { type, data } = action
   switch (type) {
-    case GET_DATA:
+    case GET_PROJECTS:
       return {
         ...state,
-        data
+        projects: data
       }
     default:
       return state
