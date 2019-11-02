@@ -1,12 +1,21 @@
 import React from 'react'
 import styled from "@emotion/styled"
+import { motion } from "framer-motion"
 
 import BackgroundImage from "../../assets/yellow_asset.png"
 
 const Cta = () => {
   return (
     <Wrapper>
-      <StyledBackground src={BackgroundImage} alt="" />
+      <StyledBackground
+        initial={{ x: 550, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ 
+          delay: 1,
+          stiffness: 100
+        }}
+        src={BackgroundImage} alt=""
+      />
     </Wrapper>
   )
 }
@@ -20,7 +29,7 @@ const Wrapper = styled.div`
   height: calc(100vh - 4rem);
 `;
 
-const StyledBackground = styled.img`
+const StyledBackground = styled(motion.img)`
   grid-column: 7 / 13;
   grid-row: 1 / 13;
   height: 100%;
