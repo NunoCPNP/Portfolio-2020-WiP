@@ -1,8 +1,8 @@
-import React from 'react'
-import styled from "@emotion/styled"
-import { motion } from "framer-motion"
+import React from "react";
+import styled from "@emotion/styled";
+import { motion } from "framer-motion";
 
-import BackgroundImage from "../../assets/yellow_asset.png"
+import BackgroundImage from "../../assets/yellow_asset.png";
 
 const Cta = () => {
   return (
@@ -10,23 +10,24 @@ const Cta = () => {
       <StyledBackground
         initial={{ x: 550, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
-        transition={{ 
+        transition={{
           delay: 1,
           stiffness: 100
         }}
-        src={BackgroundImage} alt=""
+        src={BackgroundImage}
+        alt=""
       />
     </Wrapper>
-  )
-}
+  );
+};
 
-export default Cta
+export default Cta;
 
 const Wrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
-  height: calc(100vh - 4rem);
+  height: calc(100vh - 5rem);
 `;
 
 const StyledBackground = styled(motion.img)`
