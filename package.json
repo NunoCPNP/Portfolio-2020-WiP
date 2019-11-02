@@ -1,17 +1,16 @@
 {
-  "name": "portfolio2020",
+  "name": "portfolio2020wip",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@emotion/core": "^10.0.22",
-    "@emotion/styled": "^10.0.22",
-    "firebase": "^7.2.2",
+    "@emotion/styled": "^10.0.23",
+    "firebase": "^7.2.3",
     "framer-motion": "^1.6.15",
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-helmet": "^5.2.1",
-    "react-icons": "^3.8.0",
     "react-redux": "^7.1.1",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
@@ -19,12 +18,12 @@
     "redux-devtools-extension": "^2.13.8",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
-    "standard": "^14.3.1"
+    "standart": "^6.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest --watch",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -43,18 +42,13 @@
     ]
   },
   "devDependencies": {
-    "check-prop-types": "^1.1.2",
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.15.1",
     "eslint": "^6.6.0",
     "eslint-config-prettier": "^6.5.0",
     "eslint-config-standard-react": "^9.2.0",
-    "eslint-config-standart": "^0.2.0",
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
-    "jest": "^24.9.0",
     "prettier": "^1.18.2"
   }
 }
