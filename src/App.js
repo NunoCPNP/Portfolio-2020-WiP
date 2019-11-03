@@ -5,6 +5,7 @@ import { bindActionCreators } from "redux";
 import { Helmet } from "react-helmet";
 
 import { getProjects } from "./store/sanityProjects/actions";
+import { getPosts } from "./store/sanityBlog/actions";
 
 import Header from "./components/header/Header";
 import Cta from "./components/calltoaction/Cta";
@@ -14,8 +15,9 @@ import GlobalStyle from "./styles/GlobalStyle";
 
 function App(props) {
   useEffect(() => {
-    const { getProjects } = props;
+    const { getProjects, getPosts } = props;
     getProjects();
+    getPosts();
   }, []);
 
   return (
@@ -38,11 +40,12 @@ function App(props) {
 }
 
 const mapStateToProps = state => ({
-  data: state.sanityProjects.data
+  projects: state.sanityProjects.data,
+  posts: state.sanityPosts.data
 });
 
 const mapDispatchToProps = dispatch =>
-  bindActionCreators({ getProjects }, dispatch);
+  bindActionCreators({ getProjects, getPosts }, dispatch);
 
 export default connect(
   mapStateToProps,
