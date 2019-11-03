@@ -1,14 +1,14 @@
-import React from 'react'
-import { Global, css } from '@emotion/core'
+import React from "react";
+import { Global, css } from "@emotion/core";
 
-import { gray75 } from "./colors"
+import { gray75 } from "./colors";
 
 const GlobalStyle = () => {
   return (
     <Global
       styles={css`
         @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900");
-        
+
         *,
         *::after,
         *::before {
@@ -19,6 +19,7 @@ const GlobalStyle = () => {
 
         html {
           font-size: 62.5%;
+          overflow: hidden;
           scroll-behavior: smooth;
         }
 
@@ -29,7 +30,7 @@ const GlobalStyle = () => {
         }
       `}
     />
-  )
-}
+  );
+};
 
-export default GlobalStyle
+export default GlobalStyle;

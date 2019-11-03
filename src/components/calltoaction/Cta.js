@@ -18,7 +18,15 @@ const Cta = () => {
         src={BackgroundImage}
         alt=""
       />
-      <StyledImage src={MainImage} alt="" />
+      <StyledImage
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{
+          delay: 1.5
+        }}
+        src={MainImage}
+        alt=""
+      />
     </Wrapper>
   );
 };
@@ -42,6 +50,7 @@ const StyledBackground = styled(motion.img)`
 
 const StyledImage = styled(motion.img)`
   grid-column: 5 / 13;
-  grid-row: 3 / 10;
+  grid-row: 2 / 10;
   width: 100%;
+  max-height: 40rem;
 `;
