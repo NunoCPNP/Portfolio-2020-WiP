@@ -1,8 +1,14 @@
 import React from "react";
 import styled from "@emotion/styled";
 
+import Posts from "./Posts";
+
 const Blog = () => {
-  return <Wrapper>...</Wrapper>;
+  return (
+    <Wrapper>
+      <Posts />
+    </Wrapper>
+  );
 };
 
 export default Blog;
