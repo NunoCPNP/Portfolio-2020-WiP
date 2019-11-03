@@ -3,6 +3,7 @@ import styled from "@emotion/styled";
 import { motion } from "framer-motion";
 
 import BackgroundImage from "../../assets/yellow_asset.png";
+import MainImage from "../../assets/cta.png";
 
 const Cta = () => {
   return (
@@ -17,6 +18,7 @@ const Cta = () => {
         src={BackgroundImage}
         alt=""
       />
+      <StyledImage src={MainImage} alt="" />
     </Wrapper>
   );
 };
@@ -34,5 +36,12 @@ const StyledBackground = styled(motion.img)`
   grid-column: 7 / 13;
   grid-row: 1 / 13;
   height: 100%;
+  width: 100%;
+  z-index: -10;
+`;
+
+const StyledImage = styled(motion.img)`
+  grid-column: 5 / 13;
+  grid-row: 3 / 10;
   width: 100%;
 `;
