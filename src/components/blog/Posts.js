@@ -13,26 +13,24 @@ const Posts = props => {
     getPosts();
   }, []);
 
-  const { posts } = props;
-
   return (
     <>
-      {posts.map(item => (
-        <Post key={item.id} title={item.title} />
+      {props.posts.map(item => (
+        <Post title={item.title} />
       ))}
     </>
   );
 };
 
 const mapStateToProps = state => ({
-  posts: state.sanityPosts.data
+  posts: state.sanityPosts.posts
 });
 
 const mapDispatchToProps = dispatch =>
   bindActionCreators({ getPosts }, dispatch);
 
 Posts.propTypes = {
-  posts: PropTypes.string.isRequired
+  posts: PropTypes.array.isRequired
 };
 
 export default connect(
