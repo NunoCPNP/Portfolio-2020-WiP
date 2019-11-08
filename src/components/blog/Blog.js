@@ -14,5 +14,6 @@ const Blog = () => {
 export default Blog;
 
 const Wrapper = styled.div`
-  display: grid;
+  display: flex;
+  justify-content: center;
 `;
