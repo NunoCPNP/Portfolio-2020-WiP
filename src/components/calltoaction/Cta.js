@@ -50,8 +50,9 @@ const StyledBackground = styled(motion.img)`
 
 const StyledImage = styled(motion.img)`
   grid-column: 1 / 13;
-  grid-row: 2 / 10;
+  grid-row: 3 / 10;
   align-self: center;
   justify-self: flex-end;
+  max-height: 100%;
   max-width: 70%;
 `;

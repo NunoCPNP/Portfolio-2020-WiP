@@ -1,9 +1,9 @@
-import React from 'react'
-import styled from '@emotion/styled'
-import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
+import React from "react";
+import styled from "@emotion/styled";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
-import { below } from '../../styles'
+import { below, yellow, darkBlue } from "../../styles";
 
 const MenuItems = () => {
   const animContainer = {
@@ -13,11 +13,11 @@ const MenuItems = () => {
       scale: 1,
       transition: {
         delay: 0.2,
-        when: 'beforeChildren',
+        when: "beforeChildren",
         staggerChildren: 0.1
       }
     }
-  }
+  };
 
   const animItem = {
     hidden: { y: 20, opacity: 0 },
@@ -25,35 +25,37 @@ const MenuItems = () => {
       y: 0,
       opacity: 1
     }
-  }
+  };
 
   return (
     <UList
-      data-test='menu-items-component'
+      data-test="menu-items-component"
       variants={animContainer}
-      initial='hidden'
-      animate='visible'
+      initial="hidden"
+      animate="visible"
     >
-      <motion.li className='item' variants={animItem}>
-        <StyledLink to='/'>Home</StyledLink>
+      <motion.li className="item" variants={animItem}>
+        <StyledLink to="/">Home</StyledLink>
       </motion.li>
-      <motion.li className='item' variants={animItem}>
-        <StyledLink to='/about'>About</StyledLink>
+      <motion.li className="item" variants={animItem}>
+        <StyledLink to="/about">About</StyledLink>
       </motion.li>
-      <motion.li className='item' variants={animItem}>
-        <StyledLink to='/projects'>Projects</StyledLink>
+      <motion.li className="item" variants={animItem}>
+        <StyledLink to="/projects">Projects</StyledLink>
       </motion.li>
-      <motion.li className='item' variants={animItem}>
-        <StyledLink to='/blog'>Blog</StyledLink>
+      <motion.li className="item" variants={animItem}>
+        <StyledLink to="/contacts">Contacts</StyledLink>
       </motion.li>
-      <motion.li className='item' variants={animItem}>
-        <StyledLink to='/contacts'>Contacts</StyledLink>
+      <motion.li className="item" variants={animItem}>
+        <StyledLink className="blog" to="/blog">
+          Blog
+        </StyledLink>
       </motion.li>
     </UList>
-  )
-}
+  );
+};
 
-export default MenuItems
+export default MenuItems;
 
 const UList = styled(motion.ul)`
   list-style: none;
@@ -63,7 +65,7 @@ const UList = styled(motion.ul)`
   ${below.m`
     display: none;
   `}
-`
+`;
 
 const StyledLink = styled(Link)`
   transition: all 200ms ease-in-out;
@@ -74,7 +76,13 @@ const StyledLink = styled(Link)`
   text-transform: uppercase;
   padding: 0 1rem;
 
-  &:hover {
-    color: rgb(249, 204, 65);
+  &.blog {
+    background-color: ${yellow};
+    color: ${darkBlue};
+    border-radius: 10px;
   }
-`
+
+  &:hover {
+    color: ${yellow};
+  }
+`;
