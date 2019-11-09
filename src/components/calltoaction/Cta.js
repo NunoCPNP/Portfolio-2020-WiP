@@ -49,8 +49,9 @@ const StyledBackground = styled(motion.img)`
 `;
 
 const StyledImage = styled(motion.img)`
-  grid-column: 5 / 13;
+  grid-column: 1 / 13;
   grid-row: 2 / 10;
-  width: 100%;
-  max-height: 40rem;
+  align-self: center;
+  justify-self: flex-end;
+  max-width: 70%;
 `;
