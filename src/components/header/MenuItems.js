@@ -79,7 +79,8 @@ const StyledLink = styled(Link)`
   &.blog {
     background-color: ${yellow};
     color: ${darkBlue};
-    border-radius: 10px;
+    border-radius: 1rem;
+    margin-left: 1rem;
   }
 
   &:hover {
