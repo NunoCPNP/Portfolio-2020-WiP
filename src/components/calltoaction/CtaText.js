@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import PropTypes from 'prop-types'
 
 const CtaText = ({ className }) => {
   return (
@@ -9,6 +10,10 @@ const CtaText = ({ className }) => {
       <h3>A Front-End Developer</h3>
     </Wrapper>
   )
+}
+
+CtaText.propTypes = {
+  className: PropTypes.string.isRequired
 }
 
 export default CtaText

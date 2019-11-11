@@ -1,7 +1,7 @@
-import React from "react";
-import { Global, css } from "@emotion/core";
+import React from 'react'
+import { Global, css } from '@emotion/core'
 
-import { gray75 } from "./colors";
+import { gray75 } from './colors'
 
 const GlobalStyle = () => {
   return (
@@ -30,7 +30,7 @@ const GlobalStyle = () => {
         }
       `}
     />
-  );
-};
+  )
+}
 
-export default GlobalStyle;
+export default GlobalStyle

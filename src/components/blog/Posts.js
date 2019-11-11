@@ -1,18 +1,18 @@
-import React, { useEffect } from "react";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
-import styled from "@emotion/styled";
-import PropTypes from "prop-types";
+import React, { useEffect } from 'react'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import styled from '@emotion/styled'
+import PropTypes from 'prop-types'
 
-import Post from "./Post";
+import Post from './Post'
 
-import { getPosts } from "../../store/sanityBlog/actions";
+import { getPosts } from '../../store/sanityBlog/actions'
 
 const Posts = props => {
   useEffect(() => {
-    const { getPosts } = props;
-    getPosts();
-  }, []);
+    const { getPosts } = props
+    getPosts()
+  }, [])
 
   return (
     <>
@@ -22,28 +22,28 @@ const Posts = props => {
         ))}
       </Wrapper>
     </>
-  );
-};
+  )
+}
 
 const mapStateToProps = state => ({
   posts: state.sanityPosts.posts
-});
+})
 
 const mapDispatchToProps = dispatch =>
-  bindActionCreators({ getPosts }, dispatch);
+  bindActionCreators({ getPosts }, dispatch)
 
 Posts.propTypes = {
   posts: PropTypes.array.isRequired
-};
+}
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Posts);
+)(Posts)
 
 const Wrapper = styled.div`
   display: flex;
   justify-items: center;
   margin-top: 2rem;
   width: 80vw;
-`;
+`

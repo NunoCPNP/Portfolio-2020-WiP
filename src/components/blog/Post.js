@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "@emotion/styled";
+import React from 'react'
+import styled from '@emotion/styled'
 
 const Post = props => {
   return (
@@ -9,11 +9,11 @@ const Post = props => {
         item.children.map(item => <p key={item._key}>{item.text}</p>)
       )}
     </Wrapper>
-  );
-};
+  )
+}
 
-export default Post;
+export default Post
 
 const Wrapper = styled.div`
   color: white;
-`;
+`
