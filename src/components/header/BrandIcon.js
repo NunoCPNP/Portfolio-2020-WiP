@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
 import Logo from '../../assets/logo.png'
@@ -7,7 +8,9 @@ import Logo from '../../assets/logo.png'
 const BrandIcon = () => {
   return (
     <motion.div whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.8 }}>
-      <BrandImage src={Logo} alt='Logo' />
+      <Link to='/'>
+        <BrandImage src={Logo} alt='Logo' />
+      </Link>
     </motion.div>
   )
 }
