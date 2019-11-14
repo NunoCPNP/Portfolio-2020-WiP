@@ -1,32 +1,31 @@
-import React from 'react'
-import styled from '@emotion/styled'
-import PropTypes from 'prop-types'
+import React from "react";
+import styled from "@emotion/styled";
 
-const BurgerIcon = props => {
-  const { action, value } = props
+type Props = {
+  value: boolean;
+  action: () => void;
+};
+
+const BurgerIcon: React.FC<Props> = props => {
+  const { action, value } = props;
 
   return (
     <Burger>
       <div
-        data-test='burger-icon-component'
-        role='navigation'
+        data-test="burger-icon-component"
+        role="navigation"
         onClick={action}
         className={
-          value ? 'burger burger-squeeze open' : 'burger burger-squeeze'
+          value ? "burger burger-squeeze open" : "burger burger-squeeze"
         }
       >
-        <div className='burger-lines' />
+        <div className="burger-lines" />
       </div>
     </Burger>
-  )
-}
+  );
+};
 
-BurgerIcon.propTypes = {
-  value: PropTypes.bool.isRequired,
-  action: PropTypes.func.isRequired
-}
-
-export default BurgerIcon
+export default BurgerIcon;
 
 const Burger = styled.div`
   .burger {
@@ -45,7 +44,7 @@ const Burger = styled.div`
     top: 1em;
   }
   .burger:after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     height: 150%;
@@ -62,7 +61,7 @@ const Burger = styled.div`
   .burger .burger-lines:before {
     pointer-events: none;
     display: block;
-    content: '';
+    content: "";
     width: 100%;
     border-radius: 0.25em;
     background-color: white;
@@ -113,4 +112,4 @@ const Burger = styled.div`
   .burger.burger-squeeze.open .burger-lines:after {
     transform: rotate(45deg);
   }
-`
+`;

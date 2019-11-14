@@ -3,11 +3,11 @@ import styled from '@emotion/styled'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
-import { below, yellow, darkBlue } from '../../styles'
+import { yellow, darkBlue } from '../../styles'
 
 import BlogButton from './BlogButton'
 
-const MenuItems = () => {
+const MenuItems: React.FC = () => {
   const animContainer = {
     hidden: { opacity: 1, scale: 0 },
     visible: {
@@ -62,9 +62,9 @@ const UList = styled(motion.ul)`
   display: flex;
   padding-right: 3rem;
 
-  ${below.m`
+  @media only screen and (max-width: 600px) {
     display: none;
-  `}
+  }
 `
 
 const StyledLink = styled(Link)`
