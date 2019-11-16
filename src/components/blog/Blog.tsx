@@ -13,7 +13,7 @@ const Blog: React.FC = () => {
 
 export default Blog;
 
-const Wrapper = styled.div`
+const Wrapper = styled("div")`
   display: flex;
   justify-content: center;
 `;

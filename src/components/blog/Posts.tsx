@@ -41,7 +41,7 @@ export default connect(
   mapDispatchToProps
 )(Posts);
 
-const Wrapper = styled.div`
+const Wrapper = styled("div")`
   display: flex;
   justify-items: center;
   margin-top: 2rem;

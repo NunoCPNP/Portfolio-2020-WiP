@@ -21,7 +21,7 @@ const CtaText: React.FC<Props> = ({ className }) => {
 
 export default CtaText;
 
-const Wrapper = styled.div`
+const Wrapper = styled("div")`
   display: flex;
   flex-direction: column;
   align-self: center;

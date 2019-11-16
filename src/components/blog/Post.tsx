@@ -10,8 +10,10 @@ const Post: React.FC<Props> = ({ title, body }) => {
   return (
     <Wrapper>
       <h2>{title}</h2>
-      {body.map((item: any) =>
-        item.children.map((item: any) => <p key={item._key}>{item.text}</p>)
+      {body.map((item: { children: [] }) =>
+        item.children.map((item: { _key: string; text: string }) => (
+          <p key={item._key}>{item.text}</p>
+        ))
       )}
     </Wrapper>
   );
@@ -19,6 +21,6 @@ const Post: React.FC<Props> = ({ title, body }) => {
 
 export default Post;
 
-const Wrapper = styled.div`
+const Wrapper = styled("div")`
   color: white;
 `;
