@@ -7,4 +7,4 @@ const DDMenu: React.FC = () => {
 
 export default DDMenu;
 
-const Menu = styled.div``;
+const Menu = styled("div")``;

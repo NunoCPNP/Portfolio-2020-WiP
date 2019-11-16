@@ -1,7 +1,7 @@
 import React from 'react'
 import { Global, css } from '@emotion/core'
 
-import { gray75 } from './colors'
+import { lightBlue } from './colors'
 
 const GlobalStyle = () => {
   return (
@@ -26,7 +26,7 @@ const GlobalStyle = () => {
         body {
           box-sizing: border-box;
           font-family: "Poppins", sans-serif;
-          background: ${gray75};
+          background: ${lightBlue};
         }
       `}
     />

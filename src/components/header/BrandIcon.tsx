@@ -17,6 +17,6 @@ const BrandIcon: React.FC = () => {
 
 export default BrandIcon;
 
-const BrandImage = styled.img`
+const BrandImage = styled("img")`
   width: 40px;
 `;

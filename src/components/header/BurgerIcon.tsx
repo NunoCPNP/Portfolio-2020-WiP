@@ -27,7 +27,7 @@ const BurgerIcon: React.FC<Props> = props => {
 
 export default BurgerIcon;
 
-const Burger = styled.div`
+const Burger = styled("div")`
   .burger {
     height: 3em;
     width: 3em;

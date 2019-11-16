@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 
-import { yellow } from "../../styles/colors";
+import { white, yellow } from "../../styles/colors";
 
 type Props = {
   className?: string;
@@ -25,22 +25,25 @@ const Wrapper = styled("div")`
   display: flex;
   flex-direction: column;
   align-self: center;
+  color: ${white};
 
   & h4 {
-    font-size: 2.8rem;
+    font-size: 2rem;
   }
 
   & h2 {
     font-size: 6rem;
     color: ${yellow};
+    font-weight: 800;
 
     & span {
       font-size: 4.5rem;
-      color: white;
+      color: ${white};
     }
   }
 
   & h3 {
-    font-size: 3.5rem;
+    font-size: 3rem;
+    font-weight: 800;
   }
 `;
