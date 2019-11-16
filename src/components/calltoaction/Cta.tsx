@@ -35,7 +35,7 @@ const Cta = () => {
 
 export default Cta;
 
-const Wrapper = styled.div`
+const Wrapper = styled("div")`
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
@@ -60,7 +60,7 @@ const StyledImage = styled(motion.img)`
 `;
 
 const StyledText = styled(CtaText)`
-  grid-column: 2 / 5;
+  grid-column: 2 / 6;
   grid-row: 3 / 10;
   z-index: 10;
 `;
