@@ -21,7 +21,7 @@ const Posts: React.FC<Props> = props => {
   return (
     <>
       <Wrapper>
-        {props.posts.map((item: any) => (
+        {props.posts.map((item: { id: string; title: string; body: [] }) => (
           <Post key={item.id} title={item.title} body={item.body} />
         ))}
       </Wrapper>
