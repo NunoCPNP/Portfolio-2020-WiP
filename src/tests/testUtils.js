@@ -16,5 +16,6 @@ export const checkProps = (component, conformingProps) => {
     component.propTypes,
     conformingProps,
     'prop',
-    component.name)
+    component.name
+  )
 }

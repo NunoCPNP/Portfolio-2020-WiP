@@ -35,16 +35,18 @@ const Wrapper = styled("div")`
 
 const StyledTitle = styled("div")`
   margin: 1rem 0;
+  background: rgb(249, 204, 65);
   background: linear-gradient(
-    180deg,
-    rgba(0, 35, 36, 0) 62%,
-    rgb(108, 190, 238) 38%
+    0deg,
+    rgba(249, 204, 65, 1) 45%,
+    rgba(249, 204, 65, 0) 45%
   );
   display: inline-block;
   padding: 0.1rem 0.5rem;
 
   & h2 {
     font-size: 2rem;
+    text-shadow: 0px 1px 3px black;
     line-height: 1;
   }
 `;
