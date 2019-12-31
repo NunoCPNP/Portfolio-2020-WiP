@@ -1,4 +1,4 @@
-import { GET_POSTS } from './actions';
+import { GET_POSTS } from './actions'
 
 const initialState = {
   posts: []
