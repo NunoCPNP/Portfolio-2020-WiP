@@ -1,7 +1,7 @@
-import React from "react";
-import styled from "@emotion/styled";
+import React from 'react';
+import styled from '@emotion/styled';
 
-import Posts from "./Posts";
+import Posts from './Posts';
 
 const Blog: React.FC = () => {
   return (
@@ -13,7 +13,7 @@ const Blog: React.FC = () => {
 
 export default Blog;
 
-const Wrapper = styled("div")`
+const Wrapper = styled('div')`
   display: flex;
   justify-content: center;
 `;

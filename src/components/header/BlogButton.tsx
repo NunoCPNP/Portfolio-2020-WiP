@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "@emotion/styled";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import React from 'react';
+import styled from '@emotion/styled';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
-import { yellow, darkBlue } from "../../styles";
+import { yellow, darkBlue } from '../../styles';
 
 const BlogButton: React.FC = () => {
   return (

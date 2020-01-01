@@ -1,11 +1,11 @@
-import React, { useEffect } from "react";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
-import styled from "@emotion/styled";
+import React, { useEffect } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import styled from '@emotion/styled';
 
-import Post from "./Post";
+import Post from './Post';
 
-import { getPosts } from "../../store/sanityBlog/actions";
+import { getPosts } from '../../store/sanityBlog/actions';
 
 type Props = {
   getPosts: () => void;
@@ -36,12 +36,9 @@ const mapStateToProps = (state: any) => ({
 const mapDispatchToProps = (dispatch: any) =>
   bindActionCreators({ getPosts }, dispatch);
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Posts);
+export default connect(mapStateToProps, mapDispatchToProps)(Posts);
 
-const Wrapper = styled("div")`
+const Wrapper = styled('div')`
   display: flex;
   justify-items: center;
   margin-top: 2rem;

@@ -1,14 +1,14 @@
-import React from "react";
-import styled from "@emotion/styled";
-import { motion } from "framer-motion";
+import React from 'react';
+import styled from '@emotion/styled';
+import { motion } from 'framer-motion';
 
-import { white, yellow } from "../../styles/colors";
+import { white, yellow } from '../../styles/colors';
 
 type Props = {
   className?: string;
 };
 
-const CtaText: React.FC<Props> = ({ className }) => {
+const CtaText: React.FC<Props> = ({ className }: any) => {
   return (
     <Wrapper
       initial={{ opacity: 0 }}
@@ -18,10 +18,11 @@ const CtaText: React.FC<Props> = ({ className }) => {
     >
       <h4>Hello</h4>
       <h2>
-        <span>I'm </span>Nuno Pereira
+        <span>I'm </span>
+        Nuno Pereira
       </h2>
       <h3>
-        <span>A </span>Front-End Developer
+        <span>a </span>Front-End Developer
       </h3>
     </Wrapper>
   );
@@ -32,7 +33,6 @@ export default CtaText;
 const Wrapper = styled(motion.div)`
   display: flex;
   flex-direction: column;
-  align-self: center;
 
   & h2,
   & h3,
@@ -46,7 +46,7 @@ const Wrapper = styled(motion.div)`
   }
 
   & h2 {
-    font-size: 6rem;
+    font-size: 7rem;
     color: ${yellow};
 
     & span {

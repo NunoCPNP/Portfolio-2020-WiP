@@ -1,14 +1,15 @@
-import React from "react";
-import styled from "@emotion/styled";
+import React from 'react';
+import styled from '@emotion/styled';
 
-import { white } from "../../styles/colors";
+import { white } from '../../styles/colors';
 
 type Props = {
   title: string;
   body: any;
 };
 
-const Post: React.FC<Props> = ({ title, body }) => {
+const Post: React.FC<Props> = ({ title, body }: any) => {
+  console.log(body);
   return (
     <Wrapper>
       <StyledTitle>
@@ -25,7 +26,7 @@ const Post: React.FC<Props> = ({ title, body }) => {
 
 export default Post;
 
-const Wrapper = styled("div")`
+const Wrapper = styled('div')`
   color: ${white};
 
   & p {
@@ -33,7 +34,7 @@ const Wrapper = styled("div")`
   }
 `;
 
-const StyledTitle = styled("div")`
+const StyledTitle = styled('div')`
   margin: 1rem 0;
   background: rgb(249, 204, 65);
   background: linear-gradient(
