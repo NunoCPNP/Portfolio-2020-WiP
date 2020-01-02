@@ -1,14 +1,14 @@
 /* eslint no-undef: 0 */
-const sanityClient = require('@sanity/client')
+const sanityClient = require('@sanity/client');
 
-export const GET_POSTS = 'GET_POSTS'
+export const GET_POSTS = 'GET_POSTS';
 
 const client = sanityClient({
   projectId: '6wqa4898',
   dataset: 'production',
   token: '',
   useCdn: true
-})
+});
 
 const query = `*[ _type == "post" ]{
                   "id" : _id,
@@ -17,17 +17,17 @@ const query = `*[ _type == "post" ]{
                   author,
                   categories,
                   body
-                  }`
+                  }`;
 
-const params = {}
+const params = {};
 
-export function getPosts () {
-  return async function (dispatch) {
-    const response = await client.fetch(query, params)
+export function getPosts() {
+  return async function(dispatch: any) {
+    const response = await client.fetch(query, params);
 
     return dispatch({
       type: 'GET_POSTS',
       data: response
-    })
-  }
+    });
+  };
 }

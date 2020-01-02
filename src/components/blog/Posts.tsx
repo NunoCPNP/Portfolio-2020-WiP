@@ -3,13 +3,23 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import styled from '@emotion/styled';
 
-import Post from './Post';
-
 import { getPosts } from '../../store/sanityBlog/actions';
+
+const BlockContent = require('@sanity/block-content-to-react');
 
 type Props = {
   getPosts: () => void;
   posts: any;
+};
+
+const serializers = {
+  types: {
+    code: (props: any) => (
+      <pre data-language={props.node.language}>
+        <code>{props.node.code}</code>
+      </pre>
+    )
+  }
 };
 
 const Posts: React.FC<Props> = props => {
@@ -22,7 +32,7 @@ const Posts: React.FC<Props> = props => {
     <>
       <Wrapper>
         {props.posts.map((item: { id: string; title: string; body: [] }) => (
-          <Post key={item.id} title={item.title} body={item.body} />
+          <BlockContent blocks={item.body} serializers={serializers} />
         ))}
       </Wrapper>
     </>
