@@ -1,25 +1,15 @@
-import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import styled from '@emotion/styled';
+import React, { useEffect } from "react";
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
+import styled from "@emotion/styled";
 
-import { getPosts } from '../../store/sanityBlog/actions';
+import { getPosts } from "../../store/sanityBlog/actions";
 
-const BlockContent = require('@sanity/block-content-to-react');
+import Post from "./Post";
 
 type Props = {
   getPosts: () => void;
   posts: any;
-};
-
-const serializers = {
-  types: {
-    code: (props: any) => (
-      <pre data-language={props.node.language}>
-        <code>{props.node.code}</code>
-      </pre>
-    )
-  }
 };
 
 const Posts: React.FC<Props> = props => {
@@ -32,7 +22,7 @@ const Posts: React.FC<Props> = props => {
     <>
       <Wrapper>
         {props.posts.map((item: { id: string; title: string; body: [] }) => (
-          <BlockContent blocks={item.body} serializers={serializers} />
+          <Post title={item.title} body={item.body} />
         ))}
       </Wrapper>
     </>
@@ -48,7 +38,7 @@ const mapDispatchToProps = (dispatch: any) =>
 
 export default connect(mapStateToProps, mapDispatchToProps)(Posts);
 
-const Wrapper = styled('div')`
+const Wrapper = styled("div")`
   display: flex;
   justify-items: center;
   margin-top: 2rem;
