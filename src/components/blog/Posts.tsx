@@ -9,7 +9,7 @@ import Post from './Post';
 
 type Props = {
   getPosts: () => void;
-  posts: any;
+  posts: [];
 };
 
 const Posts: React.FC<Props> = props => {

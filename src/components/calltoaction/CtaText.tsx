@@ -8,7 +8,9 @@ type Props = {
   className?: string;
 };
 
-const CtaText: React.FC<Props> = ({ className }: any) => {
+const CtaText: React.FC<Props> = props => {
+  const { className } = props;
+
   return (
     <Wrapper
       initial={{ opacity: 0 }}

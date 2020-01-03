@@ -1,43 +1,44 @@
-import React from "react";
-import styled from "@emotion/styled";
+import React from 'react';
+import styled from '@emotion/styled';
 
-import { white } from "../../styles/colors";
+import { white } from '../../styles/colors';
 
 type Props = {
   title: string;
-  body: any;
+  body: [];
 };
 
-const Post: React.FC<Props> = ({ title, body }: any) => {
-  console.log(body);
+const Post: React.FC<Props> = ({ title, body }) => {
   return (
     <Wrapper>
       <StyledTitle>
         <h2>{title}</h2>
       </StyledTitle>
 
-      {body.map((item: { children: [] }) =>
-        item.children.map(
-          (item: { _key: string; text: string; marks: any }) => {
-            if (item.marks[0] === "strong") {
-              return (
-                <span style={{ fontSize: "3rem" }} key={item._key}>
-                  {item.text}
-                </span>
-              );
-            } else {
-              return <p key={item._key}>{item.text}</p>;
+      {body.map((item: { children: [] }) => (
+        <p>
+          {item.children.map(
+            (item: { _key: string; text: string; marks: [string] }) => {
+              if (item.marks[0] === 'strong') {
+                return (
+                  <span style={{ fontWeight: 800 }} key={item._key}>
+                    {item.text}
+                  </span>
+                );
+              } else {
+                return <span key={item._key}>{item.text}</span>;
+              }
             }
-          }
-        )
-      )}
+          )}
+        </p>
+      ))}
     </Wrapper>
   );
 };
 
 export default Post;
 
-const Wrapper = styled("div")`
+const Wrapper = styled('div')`
   color: ${white};
 
   & p {
@@ -45,7 +46,7 @@ const Wrapper = styled("div")`
   }
 `;
 
-const StyledTitle = styled("div")`
+const StyledTitle = styled('div')`
   margin: 1rem 0;
   background: rgb(249, 204, 65);
   background: linear-gradient(
