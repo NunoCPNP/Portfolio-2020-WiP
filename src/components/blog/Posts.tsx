@@ -15,7 +15,7 @@ type Props = {
 const serializers = {
   types: {
     code: (props: any) => (
-      <pre data-language={props.node.language}>
+      <pre>
         <code>{props.node.code}</code>
       </pre>
     )
