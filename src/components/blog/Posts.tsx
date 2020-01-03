@@ -1,25 +1,15 @@
 import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 import styled from '@emotion/styled';
 
 import { getPosts } from '../../store/sanityBlog/actions';
 
-const BlockContent = require('@sanity/block-content-to-react');
+import Post from './Post';
 
 type Props = {
   getPosts: () => void;
   posts: any;
-};
-
-const serializers = {
-  types: {
-    code: (props: any) => (
-      <pre>
-        <code>{props.node.code}</code>
-      </pre>
-    )
-  }
 };
 
 const Posts: React.FC<Props> = props => {
@@ -32,7 +22,7 @@ const Posts: React.FC<Props> = props => {
     <>
       <Wrapper>
         {props.posts.map((item: { id: string; title: string; body: [] }) => (
-          <BlockContent blocks={item.body} serializers={serializers} />
+          <Post title={item.title} body={item.body} />
         ))}
       </Wrapper>
     </>

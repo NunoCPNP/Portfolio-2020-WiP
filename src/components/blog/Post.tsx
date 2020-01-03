@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from '@emotion/styled';
+import React from "react";
+import styled from "@emotion/styled";
 
-import { white } from '../../styles/colors';
+import { white } from "../../styles/colors";
 
 type Props = {
   title: string;
@@ -15,10 +15,21 @@ const Post: React.FC<Props> = ({ title, body }: any) => {
       <StyledTitle>
         <h2>{title}</h2>
       </StyledTitle>
+
       {body.map((item: { children: [] }) =>
-        item.children.map((item: { _key: string; text: string }) => (
-          <p key={item._key}>{item.text}</p>
-        ))
+        item.children.map(
+          (item: { _key: string; text: string; marks: any }) => {
+            if (item.marks[0] === "strong") {
+              return (
+                <span style={{ fontSize: "3rem" }} key={item._key}>
+                  {item.text}
+                </span>
+              );
+            } else {
+              return <p key={item._key}>{item.text}</p>;
+            }
+          }
+        )
       )}
     </Wrapper>
   );
@@ -26,7 +37,7 @@ const Post: React.FC<Props> = ({ title, body }: any) => {
 
 export default Post;
 
-const Wrapper = styled('div')`
+const Wrapper = styled("div")`
   color: ${white};
 
   & p {
@@ -34,7 +45,7 @@ const Wrapper = styled('div')`
   }
 `;
 
-const StyledTitle = styled('div')`
+const StyledTitle = styled("div")`
   margin: 1rem 0;
   background: rgb(249, 204, 65);
   background: linear-gradient(
