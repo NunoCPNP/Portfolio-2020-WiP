@@ -31,8 +31,7 @@ const StyledBar = styled('nav')`
 `;
 
 const NavBarBrand = styled('div')`
-  padding-left: 3rem;
-  padding-top: 0.5rem;
+  padding: 0.5rem 0rem 0.5rem 3rem;
   align-self: center;
 `;
 

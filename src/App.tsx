@@ -1,16 +1,17 @@
-import React, { useEffect } from "react";
-import { Route, Switch } from "react-router-dom";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
-import { Helmet } from "react-helmet";
+import React, { useEffect } from 'react';
+import { Route, Switch } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { Helmet } from 'react-helmet';
 
-import { getProjects } from "./store/sanityProjects/actions";
+import { getProjects } from './store/sanityProjects/actions';
 
-import Header from "./components/header/Header";
-import Cta from "./components/calltoaction/Cta";
-import Blog from "./components/blog/Blog";
+import Header from './components/header/Header';
+import Cta from './components/calltoaction/Cta';
+import Blog from './components/blog/Blog';
 
-import GlobalStyle from "./styles/GlobalStyle";
+import GlobalStyle from './styles/GlobalStyle';
+import 'sanitize.css/sanitize.css';
 
 type Props = {
   getProjects: () => void;
@@ -20,6 +21,7 @@ const App: React.FC<Props> = props => {
   useEffect(() => {
     const { getProjects } = props;
     getProjects();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -48,7 +50,4 @@ const mapStateToProps = (state: any) => ({
 const mapDispatchToProps = (dispatch: any) =>
   bindActionCreators({ getProjects }, dispatch);
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);

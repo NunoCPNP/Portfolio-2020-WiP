@@ -16,13 +16,14 @@ const Posts: React.FC<Props> = props => {
   useEffect(() => {
     const { getPosts } = props;
     getPosts();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <>
       <Wrapper>
         {props.posts.map((item: { id: string; title: string; body: [] }) => (
-          <Post title={item.title} body={item.body} />
+          <Post key={item.id} title={item.title} body={item.body} />
         ))}
       </Wrapper>
     </>
