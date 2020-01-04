@@ -1,6 +1,7 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import { connect } from "react-redux"
 import { Route } from 'react-router-dom';
+import styled from '@emotion/styled';
 
 import Posts from './Posts';
 
@@ -12,7 +13,7 @@ const Blog: React.FC = () => {
   );
 };
 
-export default Blog;
+export default connect()(Blog);
 
 const Wrapper = styled('div')`
   display: flex;
