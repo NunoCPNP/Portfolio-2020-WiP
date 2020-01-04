@@ -1,4 +1,4 @@
-import { GET_POSTS } from './actions';
+import { sanityBlogActionTypes } from './types';
 
 const initialState = {
   posts: []
@@ -7,7 +7,7 @@ const initialState = {
 export default function(state = initialState, action: any) {
   const { type, data } = action;
   switch (type) {
-    case GET_POSTS:
+    case sanityBlogActionTypes.GET_POSTS:
       return {
         ...state,
         posts: data

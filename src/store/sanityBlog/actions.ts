@@ -1,7 +1,7 @@
+import { sanityBlogActionTypes } from './types';
+
 /* eslint no-undef: 0 */
 const sanityClient = require('@sanity/client');
-
-export const GET_POSTS = 'GET_POSTS';
 
 const client = sanityClient({
   projectId: '6wqa4898',
@@ -26,7 +26,7 @@ export function getPosts() {
     const response = await client.fetch(query, params);
 
     return dispatch({
-      type: 'GET_POSTS',
+      type: sanityBlogActionTypes.GET_POSTS,
       data: response
     });
   };
