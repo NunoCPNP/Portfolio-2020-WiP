@@ -1,11 +1,23 @@
-import React from 'react';
-import { connect } from "react-redux"
+import React, { useEffect } from 'react';
 import { Route } from 'react-router-dom';
 import styled from '@emotion/styled';
 
 import Posts from './Posts';
 
-const Blog: React.FC = () => {
+type Props = {
+  visibility: (arg0: boolean) => void;
+};
+
+const Blog: React.FC<Props> = props => {
+  useEffect(() => {
+    const { visibility } = props;
+    visibility(true);
+    return () => {
+      visibility(false);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <Wrapper>
       <Route path="/" component={Posts} />
@@ -13,7 +25,7 @@ const Blog: React.FC = () => {
   );
 };
 
-export default connect()(Blog);
+export default Blog;
 
 const Wrapper = styled('div')`
   display: flex;
