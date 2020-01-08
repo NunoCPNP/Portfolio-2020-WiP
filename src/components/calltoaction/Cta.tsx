@@ -1,10 +1,10 @@
-import React from 'react';
-import styled from '@emotion/styled';
-import { motion } from 'framer-motion';
+import React from "react";
+import styled from "@emotion/styled";
+import { motion } from "framer-motion";
 
-import BackgroundImage from '../../assets/yellow_asset.png';
-import MainImage from '../../assets/cta.png';
-import CtaText from './CtaText';
+import BackgroundImage from "../../assets/yellow_asset.png";
+import MainImage from "../../assets/cta.png";
+import CtaText from "./CtaText";
 
 const Cta: React.FC = () => {
   return (
@@ -35,7 +35,7 @@ const Cta: React.FC = () => {
 
 export default Cta;
 
-const Wrapper = styled('div')`
+const Wrapper = styled("div")`
   display: grid;
   grid-template-columns: repeat(15, 1fr);
   grid-template-rows: repeat(15, 1fr);

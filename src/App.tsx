@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import { Route, Switch } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { Helmet } from 'react-helmet';
+import React, { useEffect, useState } from "react";
+import { Route, Switch } from "react-router-dom";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import { Helmet } from "react-helmet";
 
-import { getProjects } from './store/sanityProjects/actions';
+import { getProjects } from "./store/sanityProjects/actions";
 
-import Header from './components/header/Header';
-import Cta from './components/callToAction/Cta';
-import Blog from './components/blog/Blog';
-import BlogTopBar from './components/blogTopBar/BlogTopBar';
+import Header from "./components/header/Header";
+import Cta from "./components/callToAction/Cta";
+import Blog from "./components/blog/Blog";
+import BlogTopBar from "./components/blogTopBar/BlogTopBar";
 
-import GlobalStyle from './styles/GlobalStyle';
-import 'sanitize.css/sanitize.css';
+import GlobalStyle from "./styles/GlobalStyle";
+import "sanitize.css/sanitize.css";
 
 type Props = {
   getProjects: () => void;
