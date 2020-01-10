@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { Route, Switch } from "react-router-dom";
-import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
 import { Helmet } from "react-helmet";
 
-import { getProjects } from "./store/sanityProjects/actions";
-
-import Header from "./components/header/Header";
-import Cta from "./components/callToAction/Cta";
-import Blog from "./components/blog/Blog";
 import BlogTopBar from "./components/blogTopBar/BlogTopBar";
+import Header from "./components/header/Header";
+import Blog from "./components/blog/Blog";
+import Cta from "./components/callToAction/Cta";
+
+import { getProjects } from "./store/sanityProjects/actions";
 
 import GlobalStyle from "./styles/GlobalStyle";
 import "sanitize.css/sanitize.css";
