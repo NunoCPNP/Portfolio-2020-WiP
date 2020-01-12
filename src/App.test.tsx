@@ -1,19 +1,17 @@
-import React from 'react'
-import Enzyme, { shallow } from 'enzyme'
-import EnzymeAdapter from 'enzyme-adapter-react-16'
+import React from "react";
+import Enzyme, { shallow } from "enzyme";
+import EnzymeAdapter from "enzyme-adapter-react-16";
 
-import { storeFactory } from './tests/testUtils'
+import { storeFactor } from "./tests/testUtils";
 
-import App from './App'
+import App from "./App";
 
-Enzyme.configure({ adapter: new EnzymeAdapter() })
+Enzyme.configure({ adapter: new EnzymeAdapter() });
 
 const setup = (initialState = {}) => {
-  const store = storeFactory(initialState)
-  const wrapper = shallow(<App store={store} />)
-  console.log(wrapper.debug())
-}
+  const store = storeFactor(initialState);
+  const wrapper = shallow(<App store={store} />);
+  console.log(wrapper.debug());
+};
 
-it('renders without crashing', () => {
-
-})
+it("renders without crashing", () => {});

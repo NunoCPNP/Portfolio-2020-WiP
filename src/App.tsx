@@ -11,6 +11,8 @@ import Cta from "./components/callToAction/Cta";
 
 import { getProjects } from "./store/sanityProjects/actions";
 
+import { auth } from "./firebase/firebaseUtils";
+
 import GlobalStyle from "./styles/GlobalStyle";
 import "sanitize.css/sanitize.css";
 
@@ -20,12 +22,25 @@ type Props = {
 
 const App: React.FC<Props> = props => {
   const [isBlogBarOpen, setBlogBarOpen] = useState(false);
+  const [authUser, setAuthUser] = useState(null);
 
   useEffect(() => {
     const { getProjects } = props;
+
     getProjects();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  useEffect(() => {
+    const unlisten = auth.onAuthStateChanged((authUser: any) => {
+      authUser ? setAuthUser(authUser) : setAuthUser(null);
+    });
+    return () => {
+      unlisten();
+    };
+  });
+
+  console.log("Auth User: ", authUser);
 
   return (
     <>

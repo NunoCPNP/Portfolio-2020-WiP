@@ -1,15 +1,14 @@
 import React from "react";
 import styled from "@emotion/styled";
-// import { Link } from "react-router-dom";
+
+import Button from "./Button";
 
 import { yellow } from "../../styles/colors";
-
-import { signInWithGoogle } from "../../firebase/firebaseUtils";
 
 const BlogTopBar: React.FC = () => {
   return (
     <Wrapper>
-      <a onClick={signInWithGoogle}>Login</a>
+      <Button>Login</Button>
     </Wrapper>
   );
 };
