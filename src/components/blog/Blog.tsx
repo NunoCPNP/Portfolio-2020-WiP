@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
-import { Route } from 'react-router-dom';
-import styled from '@emotion/styled';
+import React, { useEffect } from "react";
+import { Route } from "react-router-dom";
+import styled from "@emotion/styled";
 
-import Posts from './Posts';
+import Posts from "./Posts";
 
 type Props = {
   visibility: (arg0: boolean) => void;
@@ -11,7 +11,9 @@ type Props = {
 const Blog: React.FC<Props> = props => {
   useEffect(() => {
     const { visibility } = props;
+
     visibility(true);
+
     return () => {
       visibility(false);
     };
@@ -27,7 +29,7 @@ const Blog: React.FC<Props> = props => {
 
 export default Blog;
 
-const Wrapper = styled('div')`
+const Wrapper = styled("div")`
   display: flex;
   justify-content: center;
 `;

@@ -1,13 +1,15 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 import { yellow } from "../../styles/colors";
+
+import { signInWithGoogle } from "../../firebase/firebaseUtils";
 
 const BlogTopBar: React.FC = () => {
   return (
     <Wrapper>
-      <Link to="/">Login</Link>
+      <a onClick={signInWithGoogle}>Login</a>
     </Wrapper>
   );
 };
@@ -22,6 +24,7 @@ const Wrapper = styled("div")`
   padding: 1rem;
 
   a {
+    cursor: pointer;
     padding-right: 3rem;
     text-decoration: none;
     font-size: 1.15rem;

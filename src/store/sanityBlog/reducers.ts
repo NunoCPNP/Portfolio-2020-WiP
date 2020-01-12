@@ -1,4 +1,4 @@
-import { sanityBlogActionTypes } from './types';
+import { sanityBlogActionTypes } from "./types";
 
 const initialState = {
   posts: []

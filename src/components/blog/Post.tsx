@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from '@emotion/styled';
+import React from "react";
+import styled from "@emotion/styled";
 
-import { white } from '../../styles/colors';
+import { white } from "../../styles/colors";
 
 type Props = {
   title: string;
@@ -19,7 +19,7 @@ const Post: React.FC<Props> = ({ title, body }) => {
         <StyledParagraph key={item._key}>
           {item.children.map(
             (item: { _key: string; text: string; marks: [string] }) => {
-              if (item.marks[0] === 'strong') {
+              if (item.marks[0] === "strong") {
                 return <Strong key={item._key}>{item.text}</Strong>;
               } else {
                 return <span key={item._key}>{item.text}</span>;
@@ -34,11 +34,11 @@ const Post: React.FC<Props> = ({ title, body }) => {
 
 export default Post;
 
-const Wrapper = styled('div')`
+const Wrapper = styled("div")`
   color: ${white};
 `;
 
-const StyledTitle = styled('div')`
+const StyledTitle = styled("div")`
   margin: 2rem 0;
   background: linear-gradient(
     0deg,
@@ -55,11 +55,11 @@ const StyledTitle = styled('div')`
   }
 `;
 
-const StyledParagraph = styled('p')`
+const StyledParagraph = styled("p")`
   font-size: 1.5rem;
   padding-bottom: 0.5rem;
 `;
 
-const Strong = styled('span')`
+const Strong = styled("span")`
   font-weight: 600;
 `;
