@@ -17,8 +17,20 @@ const setup = (props: {}, initialState = {}) => {
   return shallow(<Button store={store} {...setupProps} />);
 };
 
-test('renders without error', () => {
-  const wrapper = setup();
+test('If type = login renders without error', () => {
+  const wrapper = setup({ type: 'login' });
   const component = findByTestAttr(wrapper, 'button-component');
   expect(component.length).toBe(1);
+});
+
+test('If type = logout renders without error', () => {
+  const wrapper = setup({ type: 'logout' });
+  const component = findByTestAttr(wrapper, 'button-component');
+  expect(component.length).toBe(1);
+});
+
+test("If invalid type doesn't render", () => {
+  const wrapper = setup({});
+  const component = findByTestAttr(wrapper, 'button-component');
+  expect(component.length).toBe(0);
 });
