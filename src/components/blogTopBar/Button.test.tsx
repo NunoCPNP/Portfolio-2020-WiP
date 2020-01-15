@@ -1,11 +1,11 @@
 /* eslint no-undef: 0 */
-import React from "react";
-import Enzyme, { shallow } from "enzyme";
-import EnzymeAdapter from "enzyme-adapter-react-16";
+import React from 'react';
+import Enzyme, { shallow } from 'enzyme';
+import EnzymeAdapter from 'enzyme-adapter-react-16';
 
-import { findByTestAttr, storeFactor } from "../../tests/testUtils";
+import { findByTestAttr, storeFactor } from '../../tests/testUtils';
 
-import Button from "./Button";
+import Button from './Button';
 
 Enzyme.configure({ adapter: new EnzymeAdapter() });
 
@@ -17,8 +17,8 @@ const setup = (props: {}, initialState = {}) => {
   return shallow(<Button store={store} {...setupProps} />);
 };
 
-test("renders without error", () => {
+test('renders without error', () => {
   const wrapper = setup();
-  const component = findByTestAttr(wrapper, "button-component");
+  const component = findByTestAttr(wrapper, 'button-component');
   expect(component.length).toBe(1);
 });

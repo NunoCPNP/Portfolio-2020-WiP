@@ -1,16 +1,14 @@
-import React from "react";
-import styled from "@emotion/styled";
-import { motion } from "framer-motion";
+import React from 'react';
+import styled from '@emotion/styled';
+import { motion } from 'framer-motion';
 
-import { white, yellow } from "../../styles/colors";
+import { white, yellow } from '../../styles/colors';
 
 type Props = {
   className?: string;
 };
 
-const CtaText: React.FC<Props> = props => {
-  const { className } = props;
-
+const CtaText: React.FC<Props> = ({ className }) => {
   return (
     <Wrapper
       initial={{ opacity: 0 }}

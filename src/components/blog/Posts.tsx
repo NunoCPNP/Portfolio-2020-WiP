@@ -13,6 +13,7 @@ type Props = {
 };
 
 const Posts: React.FC<Props> = props => {
+  //! Hook to get posts from Sanity
   useEffect(() => {
     const { getPosts } = props;
     getPosts();

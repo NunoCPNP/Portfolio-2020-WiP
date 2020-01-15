@@ -1,29 +1,33 @@
-import React, { useEffect, useState } from "react";
-import { Route, Switch } from "react-router-dom";
-import { bindActionCreators } from "redux";
-import { connect } from "react-redux";
-import { Helmet } from "react-helmet";
+import React, { useEffect, useState } from 'react';
+import { Route, Switch } from 'react-router-dom';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { Helmet } from 'react-helmet';
 
-import BlogTopBar from "./components/blogTopBar/BlogTopBar";
-import Header from "./components/header/Header";
-import Blog from "./components/blog/Blog";
-import Cta from "./components/callToAction/Cta";
+import BlogTopBar from './components/blogTopBar/BlogTopBar';
+import Header from './components/header/Header';
+import Blog from './components/blog/Blog';
+import Cta from './components/callToAction/Cta';
 
-import { getProjects } from "./store/sanityProjects/actions";
+import { getProjects } from './store/sanityProjects/actions';
 
-import { auth } from "./firebase/firebaseUtils";
+import { auth } from './firebase/firebaseUtils';
 
-import GlobalStyle from "./styles/GlobalStyle";
-import "sanitize.css/sanitize.css";
+import GlobalStyle from './styles/GlobalStyle';
+
+//! CSS Normalization
+import 'sanitize.css/sanitize.css';
 
 type Props = {
   getProjects: () => void;
 };
 
 const App: React.FC<Props> = props => {
+  //! Hooks to handle state from Authentication and BlogBar
   const [isBlogBarOpen, setBlogBarOpen] = useState(false);
   const [authUser, setAuthUser] = useState(null);
 
+  //! Hoog to get projects from Sanity
   useEffect(() => {
     const { getProjects } = props;
 
@@ -31,6 +35,7 @@ const App: React.FC<Props> = props => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  //! Hook to handle Authentication
   useEffect(() => {
     const unlisten = auth.onAuthStateChanged((authUser: any) => {
       authUser ? setAuthUser(authUser) : setAuthUser(null);
@@ -39,8 +44,6 @@ const App: React.FC<Props> = props => {
       unlisten();
     };
   });
-
-  console.log("Auth User: ", authUser);
 
   return (
     <>
@@ -52,7 +55,7 @@ const App: React.FC<Props> = props => {
         />
       </Helmet>
       <Header />
-      {isBlogBarOpen && <BlogTopBar />}
+      {isBlogBarOpen && <BlogTopBar authUser={authUser} />}
       <Switch>
         <Route exact path="/" component={Cta} />
         <Route

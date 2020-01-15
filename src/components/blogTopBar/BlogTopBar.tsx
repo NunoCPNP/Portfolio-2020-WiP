@@ -1,21 +1,34 @@
-import React from "react";
-import styled from "@emotion/styled";
+import React from 'react';
+import styled from '@emotion/styled';
 
-import Button from "./Button";
+import Button from './Button';
 
-import { yellow } from "../../styles/colors";
+import { yellow } from '../../styles/colors';
 
-const BlogTopBar: React.FC = () => {
+type Props = {
+  authUser: null | { displayName: string };
+};
+
+const BlogTopBar: React.FC<Props> = ({ authUser }) => {
+  console.log('Auth User: ', authUser);
+
   return (
     <Wrapper>
-      <Button>Login</Button>
+      {authUser ? (
+        <>
+          <WelcomeMsg>{`Hi ${authUser.displayName}`}</WelcomeMsg>
+          <Button type="logout">Logout</Button>
+        </>
+      ) : (
+        <Button type="login">Login</Button>
+      )}
     </Wrapper>
   );
 };
 
 export default BlogTopBar;
 
-const Wrapper = styled("div")`
+const Wrapper = styled('div')`
   display: flex;
   justify-content: flex-end;
   width: 100vw;
@@ -30,4 +43,9 @@ const Wrapper = styled("div")`
     font-weight: 600;
     text-transform: uppercase;
   }
+`;
+
+const WelcomeMsg = styled('div')`
+  padding-right: 2rem;
+  font-size: 1.15rem;
 `;
