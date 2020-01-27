@@ -10,13 +10,14 @@ type Props = {
 };
 
 const BlogTopBar: React.FC<Props> = ({ authUser }) => {
-  console.log('Auth User: ', authUser);
-
   return (
-    <Wrapper>
+    <Wrapper data-test="blogtopbar-component">
       {authUser ? (
         <>
-          <WelcomeMsg>{`Hi ${authUser.displayName}`}</WelcomeMsg>
+          <WelcomeMsg>
+            Hi
+            <span> {authUser.displayName}</span>
+          </WelcomeMsg>
           <Button type="logout">Logout</Button>
         </>
       ) : (
@@ -48,4 +49,8 @@ const Wrapper = styled('div')`
 const WelcomeMsg = styled('div')`
   padding-right: 2rem;
   font-size: 1.15rem;
+
+  & span {
+    font-weight: 500;
+  }
 `;

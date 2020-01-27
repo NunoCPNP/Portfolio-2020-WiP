@@ -5,20 +5,20 @@ import EnzymeAdapter from 'enzyme-adapter-react-16';
 
 import { findByTestAttr, storeFactor } from '../../tests/testUtils';
 
-import BurgerIcon from './BurgerIcon';
+import BlogTopBar from './BlogTopBar';
 
 Enzyme.configure({ adapter: new EnzymeAdapter() });
 
 const defaultProps = {};
 
-const setup = (props = {}, initialState = {}) => {
+const setup = (props: {}, initialState = {}) => {
   const store = storeFactor(initialState);
   const setupProps = { ...defaultProps, ...props };
-  return shallow(<BurgerIcon store={store} {...setupProps} />);
+  return shallow(<BlogTopBar store={store} {...setupProps} />);
 };
 
 test('renders without error', () => {
-  const wrapper = setup();
-  const component = findByTestAttr(wrapper, 'burger-icon-component');
+  const wrapper = setup({});
+  const component = findByTestAttr(wrapper, 'blogtopbar-component');
   expect(component.length).toBe(1);
 });

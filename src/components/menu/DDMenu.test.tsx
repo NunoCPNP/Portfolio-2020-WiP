@@ -1,21 +1,24 @@
 /* eslint no-undef: 0 */
-import React from 'react'
-import Enzyme, { shallow } from 'enzyme'
-import EnzymeAdapter from 'enzyme-adapter-react-16'
+import React from 'react';
+import Enzyme, { shallow } from 'enzyme';
+import EnzymeAdapter from 'enzyme-adapter-react-16';
 
-import { findByTestAttr, storeFactor } from '../../tests/testUtils'
+import { findByTestAttr, storeFactor } from '../../tests/testUtils';
 
-import DDMenu from './DDMenu'
+import DDMenu from './DDMenu';
 
-Enzyme.configure({ adapter: new EnzymeAdapter() })
+Enzyme.configure({ adapter: new EnzymeAdapter() });
 
-const setup = (initialState = {}) => {
-  const store = storeFactor(initialState)
-  return shallow(<DDMenu store={store} />)
-}
+const defaultProps = {};
+
+const setup = (props = {}, initialState = {}) => {
+  const store = storeFactor(initialState);
+  const setupProps = { ...defaultProps, ...props };
+  return shallow(<DDMenu store={store} {...setupProps} />);
+};
 
 test('renders without error', () => {
-  const wrapper = setup()
-  const component = findByTestAttr(wrapper, 'ddmenu-component')
-  expect(component.length).toBe(1)
-})
+  const wrapper = setup();
+  const component = findByTestAttr(wrapper, 'ddmenu-component');
+  expect(component.length).toBe(1);
+});

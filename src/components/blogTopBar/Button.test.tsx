@@ -9,7 +9,7 @@ import Button from './Button';
 
 Enzyme.configure({ adapter: new EnzymeAdapter() });
 
-const defaultProps = { value: true, action: () => {} };
+const defaultProps = {};
 
 const setup = (props: {}, initialState = {}) => {
   const store = storeFactor(initialState);
