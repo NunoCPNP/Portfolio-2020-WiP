@@ -29,7 +29,7 @@ const App: React.FC<Props> = ({ allProjectsLoaded, getProjects }) => {
   const [isBlogBarOpen, setBlogBarOpen] = useState(false);
   const [authUser, setAuthUser] = useState(null);
 
-  //! Hoog to get projects from Sanity
+  //! Hoog to get projects from API
   useEffect(() => {
     getProjects();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -56,7 +56,9 @@ const App: React.FC<Props> = ({ allProjectsLoaded, getProjects }) => {
           content="Nuno Pereira Front End Developer Portfolio"
         />
       </Helmet>
-      {allProjectsLoaded ? (
+      {!allProjectsLoaded ? (
+        <Loader />
+      ) : (
         <>
           <Header />
           {isBlogBarOpen && <BlogTopBar authUser={authUser} />}
@@ -68,8 +70,6 @@ const App: React.FC<Props> = ({ allProjectsLoaded, getProjects }) => {
             />
           </Switch>
         </>
-      ) : (
-        <Loader />
       )}
       <GlobalStyle />
     </>
