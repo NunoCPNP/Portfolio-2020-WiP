@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
 
-import sanityProjects from './sanityProjects/reducers';
+import projects from './projects/reducers';
 import sanityPosts from './sanityBlog/reducers';
 import userHandler from './user/reducers';
 
 const rootReducer = combineReducers({
-  sanityProjects,
+  projects,
   sanityPosts,
   userHandler
 });

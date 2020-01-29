@@ -1,7 +1,8 @@
-import { GET_PROJECTS } from "./actions";
+import { GET_PROJECTS } from './actions';
 
 const initialState = {
-  projects: []
+  allProjects: [],
+  allProjectsLoaded: false
 };
 
 export default function(state = initialState, action: any) {
@@ -10,7 +11,8 @@ export default function(state = initialState, action: any) {
     case GET_PROJECTS:
       return {
         ...state,
-        projects: data
+        allProjects: data,
+        allProjectsLoaded: true
       };
     default:
       return state;
