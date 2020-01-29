@@ -8,8 +8,9 @@ import BlogTopBar from './components/blogTopBar/BlogTopBar';
 import Header from './components/header/Header';
 import Blog from './components/blog/Blog';
 import Cta from './components/callToAction/Cta';
+import Loader from './components/loader/Loader';
 
-import { getProjects } from './store/sanityProjects/actions';
+import { getProjects } from './store/projects/actions';
 
 import { auth } from './firebase/firebaseUtils';
 
@@ -20,17 +21,16 @@ import 'sanitize.css/sanitize.css';
 
 type Props = {
   getProjects: () => void;
+  allProjectsLoaded: boolean;
 };
 
-const App: React.FC<Props> = props => {
+const App: React.FC<Props> = ({ allProjectsLoaded, getProjects }) => {
   //! Hooks to handle state from Authentication and BlogBar
   const [isBlogBarOpen, setBlogBarOpen] = useState(false);
   const [authUser, setAuthUser] = useState(null);
 
-  //! Hoog to get projects from Sanity
+  //! Hoog to get projects from API
   useEffect(() => {
-    const { getProjects } = props;
-
     getProjects();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -45,6 +45,8 @@ const App: React.FC<Props> = props => {
     };
   });
 
+  console.log(allProjectsLoaded);
+
   return (
     <>
       <Helmet>
@@ -54,22 +56,28 @@ const App: React.FC<Props> = props => {
           content="Nuno Pereira Front End Developer Portfolio"
         />
       </Helmet>
-      <Header />
-      {isBlogBarOpen && <BlogTopBar authUser={authUser} />}
-      <Switch>
-        <Route exact path="/" component={Cta} />
-        <Route
-          path="/blog"
-          render={() => <Blog visibility={setBlogBarOpen} />}
-        />
-      </Switch>
+      {!allProjectsLoaded ? (
+        <Loader />
+      ) : (
+        <>
+          <Header />
+          {isBlogBarOpen && <BlogTopBar authUser={authUser} />}
+          <Switch>
+            <Route exact path="/" component={Cta} />
+            <Route
+              path="/blog"
+              render={() => <Blog visibility={setBlogBarOpen} />}
+            />
+          </Switch>
+        </>
+      )}
       <GlobalStyle />
     </>
   );
 };
 
 const mapStateToProps = (state: any) => ({
-  projects: state.sanityProjects.data
+  allProjectsLoaded: state.projects.allProjectsLoaded
 });
 
 const mapDispatchToProps = (dispatch: any) =>
