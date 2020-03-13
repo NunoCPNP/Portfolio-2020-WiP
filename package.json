@@ -17,7 +17,7 @@
     "@types/react-redux": "^7.1.7",
     "@types/react-router-dom": "^5.1.2",
     "axios": "^0.19.2",
-    "firebase": "^7.7.0",
+    "firebase": "^7.11.0",
     "framer-motion": "^1.8.3",
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
