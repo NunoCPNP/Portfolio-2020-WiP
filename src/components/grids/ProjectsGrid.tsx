@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Card from './Cards'
+import Card from '../cards/Cards'
 
 import { Wrapper, Container } from './ProjectsGrid.styles'
 

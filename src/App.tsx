@@ -9,9 +9,9 @@ import GlobalStyles from './styles/GlobalStyles'
 
 //* Redux Imports
 import { useDispatch, useSelector } from 'react-redux'
+import { StoreInterface } from './store/interface'
 import { setCurrentUser } from './store/user/actions'
 import { setProjects } from './store/projects/actions'
-import { StoreInterface } from './store/interface'
 
 //* Component Imports
 import ThemeToggler from './components/themeToggler/ThemeToggler'
@@ -43,7 +43,6 @@ const App: React.FC = () => {
 
   //* Get List of Projects
   useEffect(() => {
-    //! GET PROJECTS FROM API
     dispatch(setProjects())
   }, [])
 
@@ -56,13 +55,15 @@ const App: React.FC = () => {
       <>
         <ThemeProvider theme={darkTheme}>
           <NavBar />
-          <Switch>
-            <Route exact path="/" component={MainPage} />
-            <Route exact path="/blog" component={Blog} />
-            <Route exact path="/admin" component={Admin} />
-            <Route path="/404" component={NotFound} />
-            <Redirect to="/404" />
-          </Switch>
+          <main>
+            <Switch>
+              <Route exact path="/" component={MainPage} />
+              <Route exact path="/blog" component={Blog} />
+              <Route exact path="/admin" component={Admin} />
+              <Route path="/404" component={NotFound} />
+              <Redirect to="/404" />
+            </Switch>
+          </main>
           <ThemeToggler />
           {visible && <Notifications type={type} message={message} />}
         </ThemeProvider>

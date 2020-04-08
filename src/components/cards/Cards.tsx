@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Card } from './Cards.styles'
+import { Card, Cover } from './Cards.styles'
 
 type Props = {
   cover: string
@@ -10,9 +10,8 @@ type Props = {
 const Cards: React.FC<Props> = ({ cover, click }) => {
   return (
     <Card>
-      <div
+      <Cover
         onClick={click}
-        className="cover"
         style={{
           backgroundImage: `url(${cover})`,
         }}

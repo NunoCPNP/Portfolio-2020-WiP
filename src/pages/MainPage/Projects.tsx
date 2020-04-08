@@ -1,7 +1,7 @@
 import React from 'react'
 
 import SectionTitle from '../../components/sectionTitle/SectionTitle'
-import ProjectsGrid from '../../components/projects/ProjectsGrid'
+import ProjectsGrid from '../../components/grids/ProjectsGrid'
 
 import { Section } from './Projects.styles'
 
