@@ -1,5 +1,6 @@
 import React from 'react'
-import styled from '@emotion/styled'
+
+import { Wrapper } from './ThemeToggler.styles'
 
 type Props = {}
 
@@ -8,5 +9,3 @@ const ThemeToggler: React.FC<Props> = () => {
 }
 
 export default ThemeToggler
-
-const Wrapper = styled('div')``

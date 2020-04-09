@@ -5,6 +5,7 @@ import { StoreInterface } from '../store/interface'
 import CTA from './MainPage/CTA'
 import About from './MainPage/About'
 import Projects from './MainPage/Projects'
+import Contacts from './MainPage/Contacts'
 
 import { setControllers } from '../store/controllers/actions'
 
@@ -27,6 +28,7 @@ const MainPage: React.FC<Props> = () => {
       <CTA />
       <About />
       <Projects />
+      <Contacts />
     </PageWrapper>
   )
 }
