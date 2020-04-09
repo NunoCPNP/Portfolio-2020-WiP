@@ -11,7 +11,6 @@ import GlobalStyles from './styles/GlobalStyles'
 import { useDispatch, useSelector } from 'react-redux'
 import { StoreInterface } from './store/interface'
 import { setCurrentUser } from './store/user/actions'
-import { setProjects } from './store/projects/actions'
 
 //* Component Imports
 import ThemeToggler from './components/themeToggler/ThemeToggler'
@@ -40,11 +39,6 @@ const App: React.FC = () => {
       googleListen()
     }
   })
-
-  //* Get List of Projects
-  useEffect(() => {
-    dispatch(setProjects())
-  }, [])
 
   return (
     <>

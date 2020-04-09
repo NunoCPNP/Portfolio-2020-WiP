@@ -18,8 +18,8 @@ const Blog: React.FC<Props> = () => {
   useEffect(() => {
     controllers.appControllers.completeMenu = false
     dispatch(setControllers({ ...controllers }))
-    //
-  }, []) // eslint-disable-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line
+  }, [])
 
   return (
     <PageWrapper>

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import BrandIcon from './BrandIcon'
 import BurgerIcon from './BurgerIcon'
-import CompleteMenuItems from './MenuItems'
+import MenuItems from './MenuItems'
 
 import { StyledBar, NavBarBrand, NavBarIcon } from './NavBar.styles'
 
@@ -16,7 +16,7 @@ const Header: React.FC<Props> = () => {
       <NavBarBrand>
         <BrandIcon />
       </NavBarBrand>
-      <CompleteMenuItems />
+      <MenuItems />
       <NavBarIcon>
         <BurgerIcon action={() => setToggle(!toggle)} value={toggle} />
       </NavBarIcon>
