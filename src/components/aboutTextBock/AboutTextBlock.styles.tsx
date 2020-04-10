@@ -5,7 +5,7 @@ export const Wrapper = styled('div')`
 
   p {
     color: ${props => props.theme.colors.aboutText};
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 600;
     padding-bottom: 1.5rem;
   }

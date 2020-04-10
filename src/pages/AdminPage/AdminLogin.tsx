@@ -12,6 +12,7 @@ const AdminLogin: React.FC<Props> = () => {
   const [email, setEmail] = useState<string>('')
   const [password, setPassword] = useState<string>('')
 
+  // eslint-disable-next-line
   const [cookies, setCookie, removeCookie] = useCookies()
 
   const handleSubmit = async (event: FormEvent) => {

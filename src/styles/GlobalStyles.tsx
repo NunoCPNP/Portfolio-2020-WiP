@@ -5,7 +5,7 @@ const GlobalStyle = () => {
   return (
     <Global
       styles={css`
-        @import url('https://fonts.googleapis.com/css?family=Rubik:400,500,700,900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&display=swap');
 
         *,
         *::after,
@@ -22,7 +22,7 @@ const GlobalStyle = () => {
 
         body {
           box-sizing: border-box;
-          font-family: 'Rubik', sans-serif;
+          font-family: 'Exo 2', sans-serif;
         }
       `}
     />

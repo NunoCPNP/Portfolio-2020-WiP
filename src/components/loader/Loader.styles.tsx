@@ -1,5 +1,7 @@
 import styled from '@emotion/styled'
 
+import { yellow } from '../../styles/colors'
+
 export const Wrapper = styled('div')`
   position: absolute;
   top: calc(50% - 20px);
@@ -27,7 +29,7 @@ export const Shadow = styled('div')`
 export const Box = styled('div')`
   width: 50px;
   height: 50px;
-  background: 'yellow';
+  background: ${yellow};
   position: absolute;
   top: 0;
   left: 0;

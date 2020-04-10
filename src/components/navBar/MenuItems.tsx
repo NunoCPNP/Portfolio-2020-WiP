@@ -8,9 +8,7 @@ import BlogButton from './BlogButton'
 import { UList, StyledAnchor, StyledLink } from './MenuItems.styles'
 
 const MenuItems: React.FC = () => {
-  const { completeMenu } = useSelector((state: StoreInterface) => state.controllers.appControllers)
-
-  console.log(completeMenu)
+  const completeMenu = useSelector((state: StoreInterface) => state.controllers.appControllers.completeMenu)
 
   return (
     <UList>

@@ -2,7 +2,7 @@ import React from 'react'
 
 import SectionTitle from '../../components/sectionTitle/SectionTitle'
 import ProjectsGrid from '../../components/grids/ProjectsGrid'
-import Card from '../../components/cards/Cards'
+import Card from '../../components/card/Card'
 
 import { Section } from './Projects.styles'
 

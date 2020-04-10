@@ -21,10 +21,10 @@ export const StyledAnchor = styled('a')`
   transition: all 200ms ease-in-out;
   text-decoration: none;
   color: ${white};
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   text-transform: uppercase;
   padding: 0 1rem;
-  font-weight: 500;
+  font-weight: 600;
 
   &:hover {
     color: ${yellow};
@@ -34,10 +34,10 @@ export const StyledLink = styled(Link)`
   transition: all 200ms ease-in-out;
   text-decoration: none;
   color: ${white};
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   text-transform: uppercase;
   padding: 0 1rem;
-  font-weight: 500;
+  font-weight: 600;
 
   &:hover {
     color: ${yellow};

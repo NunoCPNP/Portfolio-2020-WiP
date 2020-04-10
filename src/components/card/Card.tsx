@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-import { Card, Cover } from './Cards.styles'
+import { Card, Cover } from './Card.styles'
 
 type Props = {
   cover: string

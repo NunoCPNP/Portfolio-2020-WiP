@@ -28,6 +28,7 @@ export const CTAText = styled('div')`
     span {
       color: ${yellow};
       font-size: 7rem;
+      font-weight: 700;
       padding-left: 1rem;
     }
   }

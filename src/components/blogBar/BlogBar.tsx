@@ -10,8 +10,6 @@ type Props = {}
 const BlogBar: React.FC<Props> = () => {
   const currentUser = useSelector((state: any) => state.users.currentUser)
 
-  console.log('CURRENT USER: ', currentUser)
-
   return (
     <>
       <BarWrapper>
