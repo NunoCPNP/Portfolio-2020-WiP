@@ -33,13 +33,19 @@ const Projects: React.FC<Props> = () => {
         subTitle="Some of the latest Projects I have been working on"
       />
 
-      <ProjectsGrid>
-        {projects.map((project: any) => (
-          <div key={project.id} ref={reference}>
-            <Card select={() => handleSelection(project.id)} cover={project.cover} />
+      {project === '' ? (
+        <ProjectsGrid>
+          {projects.map((project: any) => (
+            <Card key={project.id} select={() => handleSelection(project.id)} cover={project.cover} />
+          ))}
+        </ProjectsGrid>
+      ) : (
+        <ProjectsGrid>
+          <div ref={reference}>
+            <Card cover={selectedProject[0].cover} />
           </div>
-        ))}
-      </ProjectsGrid>
+        </ProjectsGrid>
+      )}
     </Section>
   )
 }
