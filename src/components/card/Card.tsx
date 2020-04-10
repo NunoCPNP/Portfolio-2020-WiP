@@ -5,15 +5,15 @@ import { Card, Cover } from './Card.styles'
 
 type Props = {
   cover: string
-  click?: () => void
+  select?: () => void
 }
 
-const Cards: React.FC<Props> = ({ cover, click }) => {
+const Cards: React.FC<Props> = ({ cover, select }) => {
   return (
     <motion.div whileHover={{ scale: 1.1 }}>
       <Card>
         <Cover
-          onClick={click}
+          onClick={select}
           style={{
             backgroundImage: `url(${cover})`,
           }}
