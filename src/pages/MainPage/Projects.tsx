@@ -1,24 +1,29 @@
-import React, { useRef } from 'react'
+import React, { useState, useRef } from 'react'
 
 import SectionTitle from '../../components/sectionTitle/SectionTitle'
 import ProjectsGrid from '../../components/grids/ProjectsGrid'
 import Card from '../../components/card/Card'
 
-import useClickOutside from '../../hooks/useClickOutside'
-
 import { projects } from '../../dev-data/projects'
 
 import { Section } from './Projects.styles'
 
+import useClickOutside from '../../hooks/useClickOutside'
+
 type Props = {}
 
 const Projects: React.FC<Props> = () => {
+  const [project, setProject] = useState('')
+
   const reference = useRef<HTMLDivElement | null>(null)
 
-  const selectionHandler = (id: string) => console.log(id)
-  const referenceHandler = () => console.log('Clicked outside !')
+  const handleSelection = (id: string) => setProject(id)
+  const referenceHandler = () => setProject('')
 
   useClickOutside(reference, referenceHandler)
+
+  const selectedProject = projects.filter((item: any) => item.id === project)
+  console.log('SELECTED: ', selectedProject)
 
   return (
     <Section id="Projects">
@@ -30,8 +35,8 @@ const Projects: React.FC<Props> = () => {
 
       <ProjectsGrid>
         {projects.map((project: any) => (
-          <div ref={reference} key={project.id}>
-            <Card select={() => selectionHandler(project.id)} cover={project.cover} />
+          <div key={project.id} ref={reference}>
+            <Card select={() => handleSelection(project.id)} cover={project.cover} />
           </div>
         ))}
       </ProjectsGrid>
