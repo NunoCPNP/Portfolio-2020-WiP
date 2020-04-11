@@ -1,4 +1,4 @@
-import styled from '@emotion/styled'
+import styled from '../../themes/theme'
 
 export const Section = styled('section')`
   padding-top: 5rem;

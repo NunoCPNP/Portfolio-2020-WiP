@@ -1,4 +1,4 @@
-import styled from '@emotion/styled'
+import styled from '../../themes/theme'
 
 import { yellow } from '../../styles/colors'
 

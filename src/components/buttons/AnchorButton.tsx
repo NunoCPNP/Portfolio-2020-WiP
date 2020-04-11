@@ -2,6 +2,8 @@ import React from 'react'
 
 import { StyledA, Container } from './AnchorButton.styles'
 
+import GitHubLogo from '../../assets/ghlogo.svg'
+
 type Props = {
   label: string
   icon: string
@@ -10,9 +12,9 @@ type Props = {
 
 const AnchorButton: React.FC<Props> = ({ label, icon, linkTo }) => {
   return (
-    <StyledA href={linkTo}>
+    <StyledA href={linkTo} target="_blank">
       <Container>
-        <div></div>
+        {icon === 'github' && <img src={GitHubLogo} />}
         <div>{label}</div>
       </Container>
     </StyledA>

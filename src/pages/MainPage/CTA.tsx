@@ -1,5 +1,7 @@
 import React from 'react'
 
+import AnchorButton from '../../components/buttons/AnchorButton'
+
 import { SectionWrapper, CTAText } from './CTA.styles'
 
 import ctaImage from '../../assets/ctaSVG.svg'
@@ -18,6 +20,9 @@ const CTA: React.FC<Props> = () => {
           I'm <span>Nuno Pereira</span>
         </h2>
         <h3>a Front-End Developer</h3>
+        <div>
+          <AnchorButton label="GitHub" icon="github" linkTo="https://github.com/NunoCPNP" />
+        </div>
       </CTAText>
     </SectionWrapper>
   )

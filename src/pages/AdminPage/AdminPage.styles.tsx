@@ -1,8 +1,10 @@
 import styled from '../../themes/theme'
 
+import { darkBlue } from '../../styles/colors'
+
 export const Wrapper = styled('div')`
   padding-top: 5rem;
-  background-color: ${props => props.theme.colors.backgroundColor};
+  background-color: ${darkBlue};
   color: white;
 `
 export const Container = styled('div')`

@@ -1,7 +1,9 @@
 import styled from '../../themes/theme'
 
+import { yellow } from '../../styles/colors'
+
 export const BarWrapper = styled('div')`
-  background-color: ${props => props.theme.colors.blogBar};
+  background-color: ${yellow};
   height: 2rem;
   display: flex;
   align-items: center;
@@ -19,7 +21,7 @@ export const P = styled('p')`
 
 export const Button = styled('a')`
   cursor: pointer;
-  background-color: ${props => props.theme.colors.blogBar};
+  background-color: ${yellow};
   font-size: 1.2rem;
   font-weight: 400;
 `

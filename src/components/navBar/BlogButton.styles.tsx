@@ -1,4 +1,5 @@
-import styled from '@emotion/styled'
+import styled from '../../themes/theme'
+
 import { Link } from 'react-router-dom'
 
 import { darkBlue, yellow } from '../../styles/colors'

@@ -1,5 +1,7 @@
 import styled from '../../themes/theme'
 
+import { lightBlue } from '../../styles/colors'
+
 export const StyledBar = styled('nav')`
   position: fixed;
   top: 0;
@@ -9,7 +11,7 @@ export const StyledBar = styled('nav')`
   justify-content: space-between;
   align-items: center;
   background-color: 'blue';
-  background-color: ${props => props.theme.colors.navbarColor};
+  background-color: ${lightBlue};
 `
 
 export const NavBarBrand = styled('div')`
