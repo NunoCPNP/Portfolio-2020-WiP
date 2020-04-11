@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react'
 
 import SectionTitle from '../../components/sectionTitle/SectionTitle'
 import ProjectsGrid from '../../components/grids/ProjectsGrid'
+import ProjectDetails from '../../components/projectDetails/ProjectDetails'
 import Card from '../../components/card/Card'
 
 import { projects } from '../../dev-data/projects'
@@ -44,6 +45,15 @@ const Projects: React.FC<Props> = () => {
           <div ref={reference}>
             <Card cover={selectedProject[0].cover} />
           </div>
+          <ProjectDetails
+            title={selectedProject[0].title}
+            description={selectedProject[0].description}
+            usedTechnology={selectedProject[0].usedTechnology}
+            publicCode={selectedProject[0].publicCode}
+            gitHubUrl={selectedProject[0].gitHubUrl}
+            publicUrl={selectedProject[0].publicUrl}
+            projectUrl={selectedProject[0].projectUrl}
+          />
         </ProjectsGrid>
       )}
     </Section>

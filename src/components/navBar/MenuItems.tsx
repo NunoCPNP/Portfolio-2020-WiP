@@ -22,10 +22,10 @@ const MenuItems: React.FC = () => {
         <StyledAnchor href="#About">About</StyledAnchor>
       </li>
       <li className={completeMenu ? '' : 'hidden'}>
-        <StyledAnchor href="#projects">Projects</StyledAnchor>
+        <StyledAnchor href="#Projects">Projects</StyledAnchor>
       </li>
       <li className={completeMenu ? '' : 'hidden'}>
-        <StyledAnchor href="#contacts">Contacts</StyledAnchor>
+        <StyledAnchor href="#Contacts">Contacts</StyledAnchor>
       </li>
       <li>
         <BlogButton />

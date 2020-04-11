@@ -41,3 +41,6 @@ export const CTAText = styled('div')`
     }
   }
 `
+export const ButtonsContainer = styled('div')`
+  padding-top: 1.5rem;
+`
