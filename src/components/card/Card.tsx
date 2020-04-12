@@ -10,7 +10,7 @@ type Props = {
 
 const Cards: React.FC<Props> = ({ cover, select }) => {
   return (
-    <motion.div whileHover={{ scale: 1.1 }}>
+    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}>
       <Card>
         <Cover
           onClick={select}

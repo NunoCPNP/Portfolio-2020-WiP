@@ -7,9 +7,9 @@ export const Wrapper = styled('div')`
 
   p {
     color: ${white};
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 600;
-    padding-bottom: 1.5rem;
+    padding-bottom: 1.6rem;
   }
 
   span {
@@ -17,8 +17,8 @@ export const Wrapper = styled('div')`
     letter-spacing: 1px;
     background-image: linear-gradient(
       transparent 0%,
-      transparent calc(50% - 1rem),
-      ${yellow} calc(50% - 1rem),
+      transparent calc(50% - 0.7rem),
+      ${yellow} calc(50% - 0.7rem),
       ${yellow} 100%
     );
     background-size: 100% 200%;
