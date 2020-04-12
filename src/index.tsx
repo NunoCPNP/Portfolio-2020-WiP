@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import store from './store/store'
 
-//! CSS Normalization
+//* CSS Normalization
 import 'sanitize.css/sanitize.css'
 
 import App from './App'

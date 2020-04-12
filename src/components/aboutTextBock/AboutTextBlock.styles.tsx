@@ -3,6 +3,7 @@ import styled from '../../themes/theme'
 import { yellow, white, darkBlue } from '../../styles/colors'
 
 export const Wrapper = styled('div')`
+  grid-column: 1 /4;
   display: flex;
 
   p {

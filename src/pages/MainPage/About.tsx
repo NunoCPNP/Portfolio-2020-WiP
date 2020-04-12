@@ -2,8 +2,9 @@ import React from 'react'
 
 import SectionTitle from '../../components/sectionTitle/SectionTitle'
 import AboutTextBlock from '../../components/aboutTextBock/AboutTextBlock'
+import OneColumnGrid from '../../components/grids/OneColumnGrid'
 
-import { Section, Wrapper } from './About.styles'
+import { Section } from './About.styles'
 
 type Props = {}
 
@@ -11,9 +12,9 @@ const About: React.FC<Props> = () => {
   return (
     <Section id="About">
       <SectionTitle uppercase title="About" />
-      <Wrapper>
+      <OneColumnGrid items={4} breakTo={2} gap={4} maxWidth={120} padding={4}>
         <AboutTextBlock />
-      </Wrapper>
+      </OneColumnGrid>
     </Section>
   )
 }
