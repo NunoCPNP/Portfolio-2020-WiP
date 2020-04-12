@@ -12,12 +12,6 @@ export const FormWrapper = styled.div`
     width: 80%;
   }
 
-  input[type='number']::-webkit-inner-spin-button,
-  input[type='number']::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-
   & input {
     font-size: 1.2rem;
   }

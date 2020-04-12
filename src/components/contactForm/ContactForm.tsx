@@ -18,7 +18,7 @@ const ContactForm: React.FC<Props> = () => {
         </StyledDiv>
         <StyledDiv>
           <label htmlFor="phone">Phone :</label>
-          <input autoComplete="off" type="number" id="phone" placeholder="Your Phone Number" />
+          <input autoComplete="off" type="text" id="phone" placeholder="Your Phone Number" />
         </StyledDiv>
         <StyledDiv>
           <label htmlFor="message">Message :</label>
