@@ -1,4 +1,4 @@
-export const ctaTextData = [
+export const cta = [
   [
     {
       text: 'I am a ',

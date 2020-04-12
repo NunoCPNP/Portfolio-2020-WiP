@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react'
 
 import SectionTitle from '../../components/sectionTitle/SectionTitle'
-import ProjectsGrid from '../../components/grids/ProjectsGrid'
+import OneColumnGrid from '../../components/grids/OneColumnGrid'
 import ProjectDetails from '../../components/projectDetails/ProjectDetails'
 import Card from '../../components/card/Card'
 
@@ -35,13 +35,13 @@ const Projects: React.FC<Props> = () => {
       />
 
       {project === '' ? (
-        <ProjectsGrid>
+        <OneColumnGrid items={4} breakTo={2} maxWidth={120}>
           {projects.map((project: any) => (
             <Card key={project.id} select={() => handleSelection(project.id)} cover={project.cover} />
           ))}
-        </ProjectsGrid>
+        </OneColumnGrid>
       ) : (
-        <ProjectsGrid>
+        <OneColumnGrid items={4} breakTo={2} maxWidth={120}>
           <div ref={reference}>
             <Card cover={selectedProject[0].cover} />
           </div>
@@ -54,7 +54,7 @@ const Projects: React.FC<Props> = () => {
             publicUrl={selectedProject[0].publicUrl}
             projectUrl={selectedProject[0].projectUrl}
           />
-        </ProjectsGrid>
+        </OneColumnGrid>
       )}
     </Section>
   )
