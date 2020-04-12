@@ -9,8 +9,6 @@ import Contacts from './MainPage/Contacts'
 
 import { setControllers } from '../store/controllers/actions'
 
-import { PageWrapper } from './MainPage.styles'
-
 type Props = {}
 
 const MainPage: React.FC<Props> = () => {
@@ -25,12 +23,12 @@ const MainPage: React.FC<Props> = () => {
   }, [])
 
   return (
-    <PageWrapper>
+    <>
       <CTA />
       <About />
       <Projects />
       <Contacts />
-    </PageWrapper>
+    </>
   )
 }
 

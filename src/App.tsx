@@ -5,7 +5,9 @@ import { Helmet } from 'react-helmet'
 //* Styled Components Imports
 import { ThemeProvider } from 'emotion-theming'
 import { darkTheme } from './themes/darkTheme'
+import { darkBlue } from './styles/colors'
 import GlobalStyles from './styles/GlobalStyles'
+import styled from './themes/theme'
 
 //* Redux Imports
 import { useDispatch, useSelector } from 'react-redux'
@@ -51,7 +53,7 @@ const App: React.FC = () => {
       <>
         <ThemeProvider theme={darkTheme}>
           <NavBar />
-          <main>
+          <Main>
             <Switch>
               <Route exact path="/" component={MainPage} />
               <Route exact path="/blog" component={Blog} />
@@ -59,7 +61,7 @@ const App: React.FC = () => {
               <Route path="/404" component={NotFound} />
               <Redirect to="/404" />
             </Switch>
-          </main>
+          </Main>
           <ThemeToggler />
           {visible && <Notifications type={type} message={message} />}
         </ThemeProvider>
@@ -70,3 +72,7 @@ const App: React.FC = () => {
 }
 
 export default App
+
+export const Main = styled('main')`
+  background-color: ${darkBlue};
+`
