@@ -43,8 +43,10 @@ const App: React.FC = () => {
   return (
     <>
       <Helmet>
+        <meta charSet="UTF-8" />
         <title>Nuno Pereira - Front End Developer</title>
         <meta name="description" content="Nuno Pereira Front End Developer" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Helmet>
       <>
         <ThemeProvider theme={darkTheme}>

@@ -12,6 +12,7 @@ export const StyledBar = styled('nav')`
   align-items: center;
   background-color: 'blue';
   background-color: ${lightBlue};
+  z-index: 10;
 `
 
 export const NavBarBrand = styled('div')`
