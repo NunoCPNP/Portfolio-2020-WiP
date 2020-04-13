@@ -12,7 +12,7 @@ const About: React.FC<Props> = () => {
   return (
     <Section id="About">
       <SectionTitle uppercase title="About" />
-      <OneColumnGrid items={4} breakTo={2} gap={4} maxWidth={120} padding={4}>
+      <OneColumnGrid items={4} breakTo={2} gap={4} maxWidth={140} padding={4}>
         <AboutTextBlock />
       </OneColumnGrid>
     </Section>
