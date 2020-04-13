@@ -6,7 +6,6 @@ import { StoreInterface } from '../store/interface'
 import { setControllers } from '../store/controllers/actions'
 
 import NotFoundImage from '../assets/NotFound.svg'
-import AnchorButton from '../components/buttons/AnchorButton'
 
 import { Section, Container } from './NotFound.styles'
 
