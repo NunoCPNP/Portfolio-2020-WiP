@@ -24,7 +24,6 @@ const Projects: React.FC<Props> = () => {
   useClickOutside(reference, referenceHandler)
 
   const selectedProject = projects.filter((item: any) => item.id === project)
-  console.log('SELECTED: ', selectedProject)
 
   return (
     <Section id="Projects">
