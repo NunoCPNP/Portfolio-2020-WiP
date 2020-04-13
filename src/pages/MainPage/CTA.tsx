@@ -21,7 +21,7 @@ const CTA: React.FC<Props> = () => {
         </h2>
         <h3>a Front-End Developer</h3>
         <ButtonsContainer>
-          <AnchorButton label="GitHub" icon="github" linkTo="https://github.com/NunoCPNP" />
+          <AnchorButton label="GitHub" icon="github" linkTo="https://github.com/NunoCPNP" blankTarget />
         </ButtonsContainer>
       </CTAText>
     </SectionWrapper>

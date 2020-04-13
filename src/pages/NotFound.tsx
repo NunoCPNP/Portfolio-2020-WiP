@@ -1,14 +1,36 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
-import NotFoundImage from '../assets/404.svg'
+//* Redux Imports
+import { useDispatch, useSelector } from 'react-redux'
+import { StoreInterface } from '../store/interface'
+import { setControllers } from '../store/controllers/actions'
+
+import NotFoundImage from '../assets/NotFound.svg'
+import AnchorButton from '../components/buttons/AnchorButton'
+
+import { Section, Container } from './NotFound.styles'
 
 type Props = {}
 
 const NotFound: React.FC<Props> = () => {
+  const dispatch = useDispatch()
+
+  const controllers = useSelector((state: StoreInterface) => state.controllers)
+
+  useEffect(() => {
+    controllers.appControllers.completeMenu = false
+    dispatch(setControllers({ ...controllers }))
+    // eslint-disable-next-line
+  }, [])
+
   return (
-    <section>
-      <img style={{ height: '100vh', paddingBottom: '2rem' }} src={NotFoundImage} />
-    </section>
+    <Section>
+      <Container>
+        <h2>Page not found</h2>
+        <h3>The page you requested could not be found</h3>
+        <img src={NotFoundImage} alt="Page not found" />
+      </Container>
+    </Section>
   )
 }
 

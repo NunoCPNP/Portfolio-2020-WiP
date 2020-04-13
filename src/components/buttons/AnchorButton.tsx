@@ -7,14 +7,15 @@ import GitHubLogo from '../../assets/ghlogo.svg'
 type Props = {
   label: string
   icon?: string
-  linkTo: string
+  linkTo?: string
+  blankTarget?: boolean
 }
 
-const AnchorButton: React.FC<Props> = ({ label, icon, linkTo }) => {
+const AnchorButton: React.FC<Props> = ({ label, icon, linkTo, blankTarget }) => {
   return (
     <StyledA
       href={linkTo}
-      target="_blank"
+      target={blankTarget ? '_blank' : ''}
       whileHover={{ scale: 1.1, rotate: 10 }}
       whileTap={{ scale: 0.8, rotate: -10 }}
     >
