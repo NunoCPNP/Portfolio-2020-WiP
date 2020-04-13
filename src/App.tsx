@@ -12,7 +12,7 @@ import styled from './themes/theme'
 //* Redux Imports
 import { useDispatch, useSelector } from 'react-redux'
 import { StoreInterface } from './store/interface'
-import { setCurrentUser } from './store/user/actions'
+// import { setCurrentUser } from './store/user/actions'
 
 //* Component Imports
 import ThemeToggler from './components/themeToggler/ThemeToggler'
@@ -23,24 +23,24 @@ import Notifications from './components/notifications/Notifications'
 import Admin from './pages/Admin'
 import Blog from './pages/Blog'
 
-import { auth } from './firebase/firebase'
+// import { auth } from './firebase/firebase'
 
 const App: React.FC = () => {
-  const dispatch = useDispatch()
+  // const dispatch = useDispatch()
 
   const { message, type, visible } = useSelector(
     (state: StoreInterface) => state.controllers.appControllers.notifications,
   )
 
   //* Google OAuth Listener
-  useEffect(() => {
-    const googleListen = auth.onAuthStateChanged((authUser: any) => {
-      authUser ? dispatch(setCurrentUser(authUser)) : dispatch(setCurrentUser(null))
-    })
-    return () => {
-      googleListen()
-    }
-  })
+  // useEffect(() => {
+  //   const googleListen = auth.onAuthStateChanged((authUser: any) => {
+  //     authUser ? dispatch(setCurrentUser(authUser)) : dispatch(setCurrentUser(null))
+  //   })
+  //   return () => {
+  //     googleListen()
+  //   }
+  // })
 
   console.log('VARIABLES: ', process.env)
 
