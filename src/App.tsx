@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 
@@ -10,7 +10,7 @@ import GlobalStyles from './styles/GlobalStyles'
 import styled from './themes/theme'
 
 //* Redux Imports
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { StoreInterface } from './store/interface'
 // import { setCurrentUser } from './store/user/actions'
 
