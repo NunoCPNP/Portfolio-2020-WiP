@@ -11,6 +11,9 @@ import 'sanitize.css/sanitize.css'
 
 import App from './App'
 
+//* Service Worker
+import * as serviceWorker from './serviceWorker'
+
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
@@ -19,3 +22,5 @@ ReactDOM.render(
   </Provider>,
   document.getElementById('root'),
 )
+
+serviceWorker.register()
