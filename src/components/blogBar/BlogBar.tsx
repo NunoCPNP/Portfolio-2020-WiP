@@ -1,19 +1,19 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+// import { useSelector } from 'react-redux'
 
-import { signInWithGoogle, auth } from '../../firebase/firebase'
+// import { signInWithGoogle, auth } from '../../firebase/firebase'
 
-import { BarWrapper, Button, P } from './BlogBar.styles'
+import { BarWrapper } from './BlogBar.styles'
 
 type Props = {}
 
 const BlogBar: React.FC<Props> = () => {
-  const currentUser = useSelector((state: any) => state.users.currentUser)
+  // const currentUser = useSelector((state: any) => state.users.currentUser)
 
   return (
     <>
       <BarWrapper>
-        {currentUser ? (
+        {/* {currentUser ? (
           <>
             <P>
               Hi <span>{currentUser.displayName}</span>
@@ -24,7 +24,7 @@ const BlogBar: React.FC<Props> = () => {
           <>
             <Button onClick={signInWithGoogle}>Login</Button>
           </>
-        )}
+        )} */}
       </BarWrapper>
     </>
   )
