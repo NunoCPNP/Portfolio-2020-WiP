@@ -42,6 +42,8 @@ const App: React.FC = () => {
     }
   })
 
+  console.log('VARIABLES: ', process.env)
+
   return (
     <>
       <Helmet>
