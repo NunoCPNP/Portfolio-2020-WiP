@@ -10,7 +10,7 @@ export const BarWrapper = styled('div')`
   justify-content: flex-end;
   padding: 0 4rem;
 `
-export const P = styled('p')`
+export const StyledP = styled('p')`
   font-size: 1.2rem;
 
   span {
