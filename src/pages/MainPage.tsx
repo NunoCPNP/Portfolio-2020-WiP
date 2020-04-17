@@ -5,7 +5,7 @@ import { StoreInterface } from '../store/interface'
 import CTA from './MainPage/CTA'
 import About from './MainPage/About'
 import Projects from './MainPage/Projects'
-import Contacts from './MainPage/Contacts'
+import Contacts from '../sections/Contacts'
 
 import { setControllers } from '../store/controllers/actions'
 

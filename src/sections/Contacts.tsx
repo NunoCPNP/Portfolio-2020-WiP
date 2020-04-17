@@ -1,8 +1,8 @@
 import React from 'react'
 
-import SectionTitle from '../../components/sectionTitle/SectionTitle'
-import OneColumnGrid from '../../components/grids/OneColumnGrid'
-import ContactForm from '../../components/contactForm/ContactForm'
+import SectionTitle from '../components/sectionTitle/SectionTitle'
+import OneColumnGrid from '../components/grids/OneColumnGrid'
+import ContactForm from '../components/contactForm/ContactForm'
 
 import { Section } from './Contacts.styles'
 

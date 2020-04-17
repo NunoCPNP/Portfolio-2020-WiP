@@ -3,19 +3,6 @@ import styled from '../../themes/theme'
 import { yellow, white, darkBlue } from '../../styles/colors'
 
 export const FormWrapper = styled.div`
-  & input {
-    padding-left: 1rem;
-    border: none;
-    outline: none;
-    background: none;
-    color: ${white};
-    width: 80%;
-  }
-
-  & input {
-    font-size: 1.2rem;
-  }
-
   & button {
     margin-top: 2rem;
     background: none;
@@ -32,14 +19,6 @@ export const FormWrapper = styled.div`
     background-color: ${yellow};
     border: 1px solid ${yellow};
   }
-`
-
-export const StyledDiv = styled.div`
-  padding: 0.5rem 0;
-  overflow: hidden;
-  font-size: 1.6rem;
-  border-bottom: 0.1rem solid ${white};
-  color: ${yellow};
 `
 
 export const StyledAlert = styled.div`
