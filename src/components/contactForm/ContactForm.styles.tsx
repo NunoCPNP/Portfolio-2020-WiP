@@ -20,6 +20,23 @@ export const FormWrapper = styled.div`
     border: 1px solid ${yellow};
   }
 `
+export const StyledDiv = styled.div`
+  padding: 0.5rem 0;
+  overflow: hidden;
+  font-size: 1.6rem;
+  border-bottom: 0.1rem solid ${white};
+  color: ${yellow};
+
+  input {
+    padding-left: 1rem;
+    border: none;
+    outline: none;
+    background: none;
+    color: ${white};
+    width: 80%;
+    font-size: 1.2rem;
+  }
+`
 
 export const StyledAlert = styled.div`
   margin-top: 2ren;
