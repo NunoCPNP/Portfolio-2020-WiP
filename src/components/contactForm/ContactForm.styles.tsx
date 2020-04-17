@@ -6,7 +6,7 @@ export const FormWrapper = styled.div`
   & button {
     margin-top: 2rem;
     background: none;
-    border: 1rem solid ${white};
+    border: 0.1rem solid ${white};
     color: ${white};
     cursor: pointer;
     width: 100%;
@@ -17,7 +17,7 @@ export const FormWrapper = styled.div`
   & button:hover {
     color: ${darkBlue};
     background-color: ${yellow};
-    border: 1px solid ${yellow};
+    border: 0.1rem solid ${yellow};
   }
 `
 export const StyledDiv = styled.div`

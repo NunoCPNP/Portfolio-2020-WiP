@@ -9,6 +9,7 @@ const ContactForm: React.FC<Props> = () => {
   const emailRef = useRef<HTMLInputElement>(null)
   const contactRef = useRef<HTMLInputElement>(null)
   const messageRef = useRef<HTMLInputElement>(null)
+  const buttonRef = useRef<HTMLButtonElement>(null)
 
   const nameKeyDown = (e: any) => {
     if (e.key === 'Enter') emailRef.current?.focus()
@@ -22,9 +23,17 @@ const ContactForm: React.FC<Props> = () => {
     if (e.key === 'Enter') messageRef.current?.focus()
   }
 
+  const messageKeyDown = (e: any) => {
+    if (e.key === 'Enter') buttonRef.current?.focus()
+  }
+
+  const handleFormSubmit = (e: any) => {
+    e.preventDefault()
+  }
+
   return (
     <FormWrapper>
-      <form>
+      <form onSubmit={handleFormSubmit}>
         <StyledDiv>
           <label htmlFor="name">Name: </label>
           <input
@@ -60,8 +69,18 @@ const ContactForm: React.FC<Props> = () => {
         </StyledDiv>
         <StyledDiv>
           <label htmlFor="message">Message: </label>
-          <input ref={messageRef} autoComplete="off" id="message" type="text" placeholder="Your Message" />
+          <input
+            ref={messageRef}
+            onKeyDown={messageKeyDown}
+            autoComplete="off"
+            id="message"
+            type="text"
+            placeholder="Your Message"
+          />
         </StyledDiv>
+        <button ref={buttonRef} type="submit" aria-label="submit">
+          Send
+        </button>
       </form>
     </FormWrapper>
   )
