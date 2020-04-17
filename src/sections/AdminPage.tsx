@@ -1,6 +1,6 @@
 import React from 'react'
 
-import AdminButton from '../../components/buttons/AdminButton'
+import AdminButton from '../components/buttons/AdminButton'
 
 import { Wrapper, Container, Navigation } from './AdminPage.styles'
 

@@ -1,6 +1,6 @@
-import styled from '../../themes/theme'
+import styled from '../themes/theme'
 
-import { darkBlue } from '../../styles/colors'
+import { darkBlue } from '../styles/colors'
 
 export const Wrapper = styled('div')`
   padding-top: 5rem;

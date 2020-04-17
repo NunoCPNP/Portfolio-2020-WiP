@@ -31,12 +31,13 @@ export const Cover = styled('div')`
   background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
   background-size: cover;
   perspective-origin: 50% 50%;
+  border-radius: 0.5rem;
 
   &::after {
     display: block;
     content: '';
     position: absolute;
-    z-index: 100;
+    z-index: 10;
     top: 0;
     left: 0;
     width: 100%;

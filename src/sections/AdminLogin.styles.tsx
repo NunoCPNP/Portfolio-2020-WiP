@@ -1,4 +1,4 @@
-import styled from '../../themes/theme'
+import styled from '../themes/theme'
 
 export const PageWrapper = styled('div')`
   display: grid;

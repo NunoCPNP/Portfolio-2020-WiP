@@ -1,8 +1,8 @@
 import React from 'react'
 import { useCookies } from 'react-cookie'
 
-import AdminPage from './AdminPage/AdminPage'
-import AdminLogin from './AdminPage/AdminLogin'
+import AdminPage from '../sections/AdminPage'
+import AdminLogin from '../sections/AdminLogin'
 
 type Props = {}
 

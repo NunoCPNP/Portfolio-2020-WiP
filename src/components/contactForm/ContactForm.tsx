@@ -79,7 +79,7 @@ const ContactForm: React.FC<Props> = () => {
           />
         </StyledDiv>
         <button ref={buttonRef} type="submit" aria-label="submit">
-          Send
+          Send Message
         </button>
       </form>
     </FormWrapper>
