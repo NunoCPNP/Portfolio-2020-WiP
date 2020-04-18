@@ -2,7 +2,7 @@ export const projects = [
   {
     id: '0000001',
     title: 'Plume Support',
-    cover: 'https://np-portfolio2020.s3.eu-west-2.amazonaws.com/assets/project_1.jpg',
+    cover: 'https://np-portfolio2020.s3.eu-west-2.amazonaws.com/assets/project_1.jpg?tr=w-774,h-520',
     description: 'Plume Support website built with ...',
     usedTechnology: ['ZenDesk', 'HTML', 'SCSS', 'JavaScript'],
     publicCode: false,
@@ -13,7 +13,7 @@ export const projects = [
   {
     id: '0000002',
     title: 'Plume Support',
-    cover: 'https://np-portfolio2020.s3.eu-west-2.amazonaws.com/assets/project_2.jpg',
+    cover: 'https://np-portfolio2020.s3.eu-west-2.amazonaws.com/assets/project_2.jpg?tr=w-774,h-520',
     description: 'Plume Support website built with ...',
     usedTechnology: ['ZenDesk', 'HTML', 'SCSS', 'JavaScript'],
     publicCode: false,
@@ -24,7 +24,7 @@ export const projects = [
   {
     id: '0000003',
     title: 'Plume Support',
-    cover: 'https://np-portfolio2020.s3.eu-west-2.amazonaws.com/assets/project_1.jpg',
+    cover: 'https://np-portfolio2020.s3.eu-west-2.amazonaws.com/assets/project_1.jpg?tr=w-774,h-520',
     description: 'Plume Support website built with ...',
     usedTechnology: ['ZenDesk', 'HTML', 'SCSS', 'JavaScript'],
     publicCode: false,
@@ -35,7 +35,7 @@ export const projects = [
   {
     id: '0000004',
     title: 'Plume Support',
-    cover: 'https://np-portfolio2020.s3.eu-west-2.amazonaws.com/assets/project_2.jpg',
+    cover: 'https://np-portfolio2020.s3.eu-west-2.amazonaws.com/assets/project_2.jpg?tr=w-774,h-520',
     description: 'Plume Support website built with ...',
     usedTechnology: ['ZenDesk', 'HTML', 'SCSS', 'JavaScript'],
     publicCode: false,

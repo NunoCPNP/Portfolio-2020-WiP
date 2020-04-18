@@ -15,6 +15,7 @@ const AnchorButton: React.FC<Props> = ({ label, icon, linkTo, blankTarget }) => 
   return (
     <StyledA
       href={linkTo}
+      rel={blankTarget ? 'noreferrer' : ''}
       target={blankTarget ? '_blank' : ''}
       whileHover={{ scale: 1.1, rotate: 10 }}
       whileTap={{ scale: 0.8, rotate: -10 }}
