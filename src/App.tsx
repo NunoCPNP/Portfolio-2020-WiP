@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, Suspense, lazy } from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 
@@ -16,14 +16,16 @@ import { setCurrentUser } from './store/user/actions'
 
 //* Component Imports
 import ThemeToggler from './components/themeToggler/ThemeToggler'
-import NavBar from './components/navBar/NavBar'
-import MainPage from './pages/MainPage'
-import NotFound from './pages/NotFound'
 import Notifications from './components/notifications/Notifications'
-import Admin from './pages/Admin'
-import Blog from './pages/Blog'
+import NavBar from './components/navBar/NavBar'
+import Loader from './components/loader/Loader'
 
 import { auth } from './firebase/firebase'
+
+const MainPage = lazy(() => import('./pages/MainPage'))
+const Blog = lazy(() => import('./pages/Blog'))
+const Admin = lazy(() => import('./pages/Admin'))
+const NotFound = lazy(() => import('./pages/NotFound'))
 
 const App: React.FC = () => {
   const dispatch = useDispatch()
@@ -51,20 +53,22 @@ const App: React.FC = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Helmet>
       <>
-        <ThemeProvider theme={darkTheme}>
-          <NavBar />
-          <Main>
-            <Switch>
-              <Route exact path="/" component={MainPage} />
-              <Route exact path="/blog" component={Blog} />
-              <Route exact path="/admin" component={Admin} />
-              <Route path="/404" component={NotFound} />
-              <Redirect to="/404" />
-            </Switch>
-          </Main>
-          <ThemeToggler />
-          {visible && <Notifications type={type} message={message} />}
-        </ThemeProvider>
+        <Suspense fallback={<Loader />}>
+          <ThemeProvider theme={darkTheme}>
+            <NavBar />
+            <Main>
+              <Switch>
+                <Route exact path="/" component={MainPage} />
+                <Route exact path="/blog" component={Blog} />
+                <Route exact path="/admin" component={Admin} />
+                <Route path="/404" component={NotFound} />
+                <Redirect to="/404" />
+              </Switch>
+            </Main>
+            <ThemeToggler />
+            {visible && <Notifications type={type} message={message} />}
+          </ThemeProvider>
+        </Suspense>
       </>
       <GlobalStyles />
     </>
