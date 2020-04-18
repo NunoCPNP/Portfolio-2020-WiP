@@ -36,13 +36,18 @@ const Projects: React.FC<Props> = () => {
       {project === '' ? (
         <OneColumnGrid items={4} breakTo={2} gap={4} maxWidth={120} padding={4}>
           {projects.map((project: any) => (
-            <Card key={project.id} select={() => handleSelection(project.id)} cover={project.cover} />
+            <Card
+              key={project.id}
+              select={() => handleSelection(project.id)}
+              image={project.cover}
+              alt={project.title}
+            />
           ))}
         </OneColumnGrid>
       ) : (
-        <OneColumnGrid items={4} breakTo={2} gap={4} maxWidth={140} padding={4}>
+        <OneColumnGrid items={4} breakTo={2} gap={4} maxWidth={120} padding={4}>
           <div ref={reference}>
-            <Card cover={selectedProject[0].cover} />
+            <Card image={selectedProject[0].cover} alt={selectedProject[0].title} />
           </div>
           <ProjectDetails
             title={selectedProject[0].title}

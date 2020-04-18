@@ -1,23 +1,19 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-import { Card, Cover } from './Card.styles'
+import { Card } from './Card.styles'
 
 type Props = {
-  cover: string
+  image: string
+  alt: string
   select?: () => void
 }
 
-const Cards: React.FC<Props> = ({ cover, select }) => {
+const Cards: React.FC<Props> = ({ image, alt, select }) => {
   return (
     <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}>
       <Card>
-        <Cover
-          onClick={select}
-          style={{
-            backgroundImage: `url(${cover})`,
-          }}
-        />
+        <img src={image} onClick={select} alt={alt} loading="lazy" />
       </Card>
     </motion.div>
   )
