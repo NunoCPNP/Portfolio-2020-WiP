@@ -1,8 +1,8 @@
 import React from 'react'
 
-import SectionTitle from '../../components/sectionTitle/SectionTitle'
-import AboutTextBlock from '../../components/aboutTextBock/AboutTextBlock'
-import OneColumnGrid from '../../components/grids/OneColumnGrid'
+import SectionTitle from '../components/sectionTitle/SectionTitle'
+import AboutTextBlock from '../components/aboutTextBock/AboutTextBlock'
+import OneColumnGrid from '../components/grids/OneColumnGrid'
 
 import { Section } from './About.styles'
 

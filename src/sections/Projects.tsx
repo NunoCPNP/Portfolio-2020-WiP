@@ -1,15 +1,15 @@
 import React, { useState, useRef } from 'react'
 
-import SectionTitle from '../../components/sectionTitle/SectionTitle'
-import OneColumnGrid from '../../components/grids/OneColumnGrid'
-import ProjectDetails from '../../components/projectDetails/ProjectDetails'
-import Card from '../../components/card/Card'
+import SectionTitle from '../components/sectionTitle/SectionTitle'
+import OneColumnGrid from '../components/grids/OneColumnGrid'
+import ProjectDetails from '../components/projectDetails/ProjectDetails'
+import Card from '../components/card/Card'
 
-import { projects } from '../../dev-data/projects'
+import { projects } from '../dev-data/projects'
 
 import { Section } from './Projects.styles'
 
-import useClickOutside from '../../hooks/useClickOutside'
+import useClickOutside from '../hooks/useClickOutside'
 
 type Props = {}
 

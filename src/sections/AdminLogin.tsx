@@ -3,8 +3,8 @@ import { useCookies } from 'react-cookie'
 
 import { PageWrapper, LeftWrapper, RightWrapper, FormWrapper, Button } from './AdminLogin.styles'
 
-import { adminLogin } from '../../api/adminLogin'
-import { setDuration } from '../../helpers/setDuration'
+import { adminLogin } from '../api/adminLogin'
+import { setDuration } from '../helpers/setDuration'
 
 type Props = {}
 

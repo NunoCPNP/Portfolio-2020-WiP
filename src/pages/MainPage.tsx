@@ -2,10 +2,10 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { StoreInterface } from '../store/interface'
 
-import CTA from './MainPage/CTA'
-import About from './MainPage/About'
-import Projects from './MainPage/Projects'
-import Contacts from './MainPage/Contacts'
+import CTA from '../sections/CTA'
+import About from '../sections/About'
+import Projects from '../sections/Projects'
+import Contacts from '../sections/Contacts'
 
 import { setControllers } from '../store/controllers/actions'
 

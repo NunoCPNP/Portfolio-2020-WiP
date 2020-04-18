@@ -1,10 +1,10 @@
 import React from 'react'
 
-import AnchorButton from '../../components/buttons/AnchorButton'
+import AnchorButton from '../components/buttons/AnchorButton'
 
 import { SectionWrapper, CTAText, ButtonsContainer } from './CTA.styles'
 
-import ctaImage from '../../assets/ctaSVG.svg'
+import ctaImage from '../assets/ctaSVG.svg'
 
 type Props = {}
 
