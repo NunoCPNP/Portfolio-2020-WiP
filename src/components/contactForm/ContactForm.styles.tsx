@@ -12,6 +12,7 @@ export const FormWrapper = styled.div`
     width: 100%;
     transition: all 300ms linear 0s;
     padding: 0.4rem;
+    font-size: 1.1rem;
     font-weight: 500;
     text-transform: uppercase;
   }
