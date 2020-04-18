@@ -14,7 +14,6 @@ import { useSelector } from 'react-redux'
 import { StoreInterface } from './store/interface'
 
 //* Component Imports
-import ThemeToggler from './components/themeToggler/ThemeToggler'
 import Notifications from './components/notifications/Notifications'
 import NavBar from './components/navBar/NavBar'
 import Loader from './components/loader/Loader'
@@ -37,24 +36,21 @@ const App: React.FC = () => {
         <meta name="description" content="Nuno Pereira Front End Developer" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Helmet>
-      <>
-        <Suspense fallback={<Loader />}>
-          <ThemeProvider theme={darkTheme}>
-            <NavBar />
-            <Main>
-              <Switch>
-                <Route exact path="/" component={MainPage} />
-                <Route exact path="/blog" component={Blog} />
-                <Route exact path="/admin" component={Admin} />
-                <Route path="/404" component={NotFound} />
-                <Redirect to="/404" />
-              </Switch>
-            </Main>
-            <ThemeToggler />
-            {visible && <Notifications type={type} message={message} />}
-          </ThemeProvider>
-        </Suspense>
-      </>
+      <Suspense fallback={<Loader />}>
+        <ThemeProvider theme={darkTheme}>
+          <NavBar />
+          <Main>
+            <Switch>
+              <Route exact path="/" component={MainPage} />
+              <Route exact path="/blog" component={Blog} />
+              <Route exact path="/admin" component={Admin} />
+              <Route path="/404" component={NotFound} />
+              <Redirect to="/404" />
+            </Switch>
+          </Main>
+          {visible && <Notifications type={type} message={message} />}
+        </ThemeProvider>
+      </Suspense>
       <GlobalStyles />
     </>
   )
