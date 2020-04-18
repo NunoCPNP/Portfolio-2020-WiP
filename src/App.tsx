@@ -1,4 +1,4 @@
-import React, { useEffect, Suspense, lazy } from 'react'
+import React, { Suspense, lazy } from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 
@@ -10,9 +10,8 @@ import GlobalStyles from './styles/GlobalStyles'
 import styled from './themes/theme'
 
 //* Redux Imports
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector } from 'react-redux'
 import { StoreInterface } from './store/interface'
-import { setCurrentUser } from './store/user/actions'
 
 //* Component Imports
 import ThemeToggler from './components/themeToggler/ThemeToggler'
@@ -20,29 +19,15 @@ import Notifications from './components/notifications/Notifications'
 import NavBar from './components/navBar/NavBar'
 import Loader from './components/loader/Loader'
 
-import { auth } from './firebase/firebase'
-
 const MainPage = lazy(() => import('./pages/MainPage'))
 const Blog = lazy(() => import('./pages/Blog'))
 const Admin = lazy(() => import('./pages/Admin'))
 const NotFound = lazy(() => import('./pages/NotFound'))
 
 const App: React.FC = () => {
-  const dispatch = useDispatch()
-
   const { message, type, visible } = useSelector(
     (state: StoreInterface) => state.controllers.appControllers.notifications,
   )
-
-  //* Google OAuth Listener
-  useEffect(() => {
-    const googleListen = auth.onAuthStateChanged((authUser: any) => {
-      authUser ? dispatch(setCurrentUser(authUser)) : dispatch(setCurrentUser(null))
-    })
-    return () => {
-      googleListen()
-    }
-  })
 
   return (
     <>

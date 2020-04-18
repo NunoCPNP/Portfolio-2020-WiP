@@ -1,6 +1,7 @@
 import React from 'react'
 import { useCookies } from 'react-cookie'
 
+//* Component Imports
 import AdminPage from '../sections/AdminPage'
 import AdminLogin from '../sections/AdminLogin'
 

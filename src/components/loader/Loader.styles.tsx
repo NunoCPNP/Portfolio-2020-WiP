@@ -1,20 +1,27 @@
 import styled from '../../themes/theme'
 
-import { yellow } from '../../styles/colors'
+import { yellow, darkBlue } from '../../styles/colors'
+
+export const Section = styled('section')`
+  background-color: ${darkBlue};
+  height: 100vh;
+  width: 100vw;
+`
 
 export const Wrapper = styled('div')`
   position: absolute;
-  top: calc(50% - 20px);
-  left: calc(50% - 20px);
+  top: calc(50% - 2rem);
+  left: calc(50% - 2rem);
+  color: black;
 `
 
 export const Shadow = styled('div')`
-  width: 50px;
-  height: 5px;
+  width: 5rem;
+  height: 5rem;
   background: #000;
   opacity: 0.1;
   position: absolute;
-  top: 59px;
+  top: 5.9rem;
   left: 0;
   border-radius: 50%;
   animation: shadow 0.5s linear infinite;
@@ -27,13 +34,13 @@ export const Shadow = styled('div')`
 `
 
 export const Box = styled('div')`
-  width: 50px;
-  height: 50px;
+  width: 5rem;
+  height: 5rem;
   background: ${yellow};
   position: absolute;
   top: 0;
   left: 0;
-  border-radius: 3px;
+  border-radius: 0.3rem;
   animation: animate 0.5s linear infinite;
 
   @keyframes animate {
