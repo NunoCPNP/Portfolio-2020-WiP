@@ -19,6 +19,7 @@
     "emotion-theming": "^10.0.27",
     "firebase": "^7.14.1",
     "framer-motion": "^1.10.3",
+    "logrocket": "^1.0.7",
     "prop-types": "^15.7.2",
     "react": "^16.13.0",
     "react-cookie": "^4.0.3",
