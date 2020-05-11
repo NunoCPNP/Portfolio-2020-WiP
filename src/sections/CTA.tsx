@@ -11,7 +11,7 @@ type Props = {}
 const CTA: React.FC<Props> = () => {
   return (
     <SectionWrapper id="Home">
-      <img src={ctaImage} alt="" loading="lazy" />
+      <img src={ctaImage} alt="" />
       <CTAText>
         <h3>
           <span>Hello</span>
