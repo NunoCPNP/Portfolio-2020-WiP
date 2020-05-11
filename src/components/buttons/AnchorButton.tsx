@@ -14,6 +14,7 @@ type Props = {
 const AnchorButton: React.FC<Props> = ({ label, icon, linkTo, blankTarget }) => {
   return (
     <StyledA
+      rel={blankTarget ? 'noreferrer' : ''}
       href={linkTo}
       rel={blankTarget ? 'noreferrer' : ''}
       target={blankTarget ? '_blank' : ''}
