@@ -32,7 +32,7 @@ const ContactForm: React.FC<Props> = () => {
   }
 
   return (
-    <FormWrapper>
+    <FormWrapper data-test="ContactForm">
       <form onSubmit={handleFormSubmit}>
         <StyledDiv>
           <label htmlFor="name">Name: </label>
