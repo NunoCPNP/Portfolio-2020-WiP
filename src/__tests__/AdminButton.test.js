@@ -5,7 +5,7 @@ import AdminButton from '../components/buttons/AdminButton'
 
 const defaultProps = {}
 
-const setup: any = (props = {}) => {
+const setup = (props = {}) => {
   const setupProps = { ...defaultProps, ...props }
   return shallow(<AdminButton {...setupProps} />)
 }
