@@ -1,6 +1,8 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
+import { findByTestAttr } from '../../test/testUtils'
+
 import AnchorButton from '../components/buttons/AnchorButton'
 
 const defaultProps = {
@@ -12,8 +14,10 @@ const setup = (props = {}) => {
   return shallow(<AnchorButton {...setupProps} />)
 }
 
-describe('AnchorButton', () => {
+describe('AnchorButton Component Tests: ', () => {
   it('Renders without errors', () => {
-    setup()
+    const wrapper = setup()
+    const component = findByTestAttr(wrapper, 'AnchorButton')
+    expect(component.text()).toBe(1)
   })
 })

@@ -11,7 +11,7 @@ type Props = {
 
 const Cards: React.FC<Props> = ({ image, alt, select }) => {
   return (
-    <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}>
+    <motion.div data-test="Card" whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}>
       <Card>
         <img loading="lazy" src={image} onClick={select} alt={alt} />
       </Card>

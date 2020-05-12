@@ -8,7 +8,11 @@ type Props = {
 }
 
 const AdminButton: React.FC<Props> = ({ label, handleClick }) => {
-  return <StyledButton onClick={handleClick}>{label}</StyledButton>
+  return (
+    <StyledButton data-test="AdminButton" onClick={handleClick}>
+      {label}
+    </StyledButton>
+  )
 }
 
 export default AdminButton

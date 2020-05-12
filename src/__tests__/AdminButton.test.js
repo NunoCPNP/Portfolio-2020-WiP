@@ -1,6 +1,8 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 
+import { findByTestAttr } from '../../test/testUtils'
+
 import AdminButton from '../components/buttons/AdminButton'
 
 const defaultProps = {}
@@ -10,8 +12,10 @@ const setup = (props = {}) => {
   return shallow(<AdminButton {...setupProps} />)
 }
 
-describe('AdminButton', () => {
+describe('AdminButton Component Tests: ', () => {
   it('Renders without errors', () => {
-    setup()
+    const wrapper = setup()
+    const component = findByTestAttr(wrapper, 'AdminButton')
+    expect(component.text()).toBe(1)
   })
 })

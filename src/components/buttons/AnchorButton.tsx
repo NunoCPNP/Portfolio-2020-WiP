@@ -19,6 +19,7 @@ const AnchorButton: React.FC<Props> = ({ label, icon, linkTo, blankTarget }) => 
       target={blankTarget ? '_blank' : ''}
       whileHover={{ scale: 1.1, rotate: 10 }}
       whileTap={{ scale: 0.8, rotate: -10 }}
+      data-test="AnchorButton"
     >
       <Container>
         {icon === 'github' && <img src={GitHubLogo} alt="GitHub Profile" />}
