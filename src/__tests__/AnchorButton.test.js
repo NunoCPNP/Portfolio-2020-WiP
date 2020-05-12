@@ -18,6 +18,6 @@ describe('AnchorButton Component Tests: ', () => {
   it('Renders without errors', () => {
     const wrapper = setup()
     const component = findByTestAttr(wrapper, 'AnchorButton')
-    expect(component.text()).toBe(1)
+    expect(component.length).toBe(1)
   })
 })

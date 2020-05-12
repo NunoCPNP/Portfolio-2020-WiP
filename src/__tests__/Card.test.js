@@ -12,10 +12,10 @@ const setup = (props = {}) => {
   return shallow(<Card {...setupProps} />)
 }
 
-describe('Card Component Tests:', () => {
+describe('Card Component Tests: ', () => {
   it('Renders without errors', () => {
     const wrapper = setup()
     const component = findByTestAttr(wrapper, 'Card')
-    expect(component.text()).toBe(1)
+    expect(component.length).toBe(1)
   })
 })

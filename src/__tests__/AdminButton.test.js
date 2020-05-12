@@ -16,6 +16,6 @@ describe('AdminButton Component Tests: ', () => {
   it('Renders without errors', () => {
     const wrapper = setup()
     const component = findByTestAttr(wrapper, 'AdminButton')
-    expect(component.text()).toBe(1)
+    expect(component.length).toBe(1)
   })
 })
