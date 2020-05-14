@@ -4,11 +4,8 @@ import { shallow } from 'enzyme'
 import Loader from './Loader'
 import { Section, Wrapper, Shadow, Box } from './Loader.styles'
 
-const defaultProps = {}
-
 const setup = (props = {}) => {
-  const setupProps = { ...defaultProps, ...props }
-  return shallow(<Loader {...setupProps} />)
+  return shallow(<Loader {...props} />)
 }
 
 describe('Loader Component Tests:', () => {

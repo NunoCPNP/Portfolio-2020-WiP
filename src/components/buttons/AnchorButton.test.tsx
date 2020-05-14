@@ -4,12 +4,12 @@ import { shallow } from 'enzyme'
 import AnchorButton from './AnchorButton'
 import { StyledA, Container } from './AnchorButton.styles'
 
-const defaultProps = {
+const initialProps = {
   label: 'test label',
 }
 
 const setup = (props = {}) => {
-  const setupProps = { ...defaultProps, ...props }
+  const setupProps = { ...initialProps, ...props }
   return shallow(<AnchorButton {...setupProps} />)
 }
 

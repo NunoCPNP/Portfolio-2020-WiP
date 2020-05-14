@@ -4,13 +4,13 @@ import { shallow } from 'enzyme'
 import AdminButton from './AdminButton'
 import { StyledButton } from './AdminButton.styles'
 
-const defaultProps = {
+const initialProps = {
   label: 'test label',
   handleClick: () => null,
 }
 
 const setup = (props = {}) => {
-  const setupProps = { ...defaultProps, ...props }
+  const setupProps = { ...initialProps, ...props }
   return shallow(<AdminButton {...setupProps} />)
 }
 

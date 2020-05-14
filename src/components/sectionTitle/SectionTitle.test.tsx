@@ -4,12 +4,12 @@ import { shallow } from 'enzyme'
 import SectionTitle from './SectionTitle'
 import { Wrapper } from './SectionTitle.styles'
 
-const defaultProps = {
+const initialProps = {
   title: 'test title',
 }
 
 const setup = (props = {}) => {
-  const setupProps = { ...defaultProps, ...props }
+  const setupProps = { ...initialProps, ...props }
   return shallow(<SectionTitle {...setupProps} />)
 }
 

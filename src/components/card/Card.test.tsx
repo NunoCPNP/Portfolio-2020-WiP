@@ -4,13 +4,13 @@ import { shallow } from 'enzyme'
 import Card from './Card'
 import { CardWrapper } from './Card.styles'
 
-const defaultProps = {
+const initialProps = {
   image: 'test img',
   alt: 'alt test tag',
 }
 
 const setup = (props = {}) => {
-  const setupProps = { ...defaultProps, ...props }
+  const setupProps = { ...initialProps, ...props }
   return shallow(<Card {...setupProps} />)
 }
 

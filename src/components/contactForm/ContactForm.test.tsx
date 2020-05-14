@@ -4,11 +4,8 @@ import { shallow } from 'enzyme'
 import ContactForm from './ContactForm'
 import { FormWrapper, StyledDiv } from './ContactForm.styles'
 
-const defaultProps = {}
-
 const setup = (props = {}) => {
-  const setupProps = { ...defaultProps, ...props }
-  return shallow(<ContactForm {...setupProps} />)
+  return shallow(<ContactForm {...props} />)
 }
 
 describe('ContactForm Component Tests: ', () => {
