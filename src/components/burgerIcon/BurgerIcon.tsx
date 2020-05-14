@@ -6,13 +6,10 @@ type Props = {
   action: () => void
 }
 
-const BurgerIcon: React.FC<Props> = (props) => {
-  const { action, value } = props
-
+const BurgerIcon: React.FC<Props> = ({ action, value }) => {
   return (
     <Burger>
       <div
-        data-test="burger-icon-component"
         role="navigation"
         onClick={action}
         className={value ? 'burger burger-squeeze open' : 'burger burger-squeeze'}
