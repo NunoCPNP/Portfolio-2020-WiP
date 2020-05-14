@@ -19,7 +19,7 @@ import NavBar from './components/navBar/NavBar'
 import Loader from './components/loader/Loader'
 
 const MainPage = lazy(() => import('./pages/MainPage'))
-const Blog = lazy(() => import('./pages/Blog'))
+const Blog = lazy(() => import('./pages/Blog/Blog'))
 const Admin = lazy(() => import('./pages/Admin'))
 const NotFound = lazy(() => import('./pages/NotFound'))
 
