@@ -15,7 +15,7 @@ import { StoreInterface } from './store/interface'
 
 //* Component Imports
 import Toast from './components/toast/Toast'
-import NavBar from './components/navBar/NavBar'
+import NavBar from './sections/navBar/NavBar'
 import Loader from './components/loader/Loader'
 
 const MainPage = lazy(() => import('./pages/MainPage'))

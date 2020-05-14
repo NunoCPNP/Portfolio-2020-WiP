@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react'
 
 import { useDispatch, useSelector } from 'react-redux'
+import { setControllers } from '../../store/controllers/actions'
 import { setCurrentUser } from '../../store/user/actions'
 import { StoreInterface } from '../../store/interface'
 
 import BlogBar from '../../components/blogBar/BlogBar'
-
-import { setControllers } from '../../store/controllers/actions'
 
 import { PageWrapper, ComingSoon } from './Blog.styles'
 
@@ -17,6 +16,8 @@ type Props = {}
 const Blog: React.FC<Props> = () => {
   const dispatch = useDispatch()
 
+  const controllers = useSelector((state: StoreInterface) => state.controllers)
+
   //* Google OAuth Listener
   useEffect(() => {
     const googleListen = auth.onAuthStateChanged((authUser: any) => {
@@ -26,8 +27,6 @@ const Blog: React.FC<Props> = () => {
       googleListen()
     }
   })
-
-  const controllers = useSelector((state: StoreInterface) => state.controllers)
 
   useEffect(() => {
     controllers.appControllers.completeMenu = false

@@ -6,7 +6,7 @@ type Props = {
   action: () => void
 }
 
-const BurgerIcon: React.FC<Props> = props => {
+const BurgerIcon: React.FC<Props> = (props) => {
   const { action, value } = props
 
   return (
