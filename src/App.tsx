@@ -14,7 +14,7 @@ import { useSelector } from 'react-redux'
 import { StoreInterface } from './store/interface'
 
 //* Component Imports
-import Notifications from './components/notifications/Notifications'
+import Toast from './components/toast/Toast'
 import NavBar from './components/navBar/NavBar'
 import Loader from './components/loader/Loader'
 
@@ -48,7 +48,7 @@ const App: React.FC = () => {
               <Redirect to="/404" />
             </Switch>
           </Main>
-          {visible && <Notifications type={type} message={message} />}
+          {visible && <Toast type={type} message={message} />}
         </ThemeProvider>
       </Suspense>
       <GlobalStyles />

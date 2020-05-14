@@ -13,7 +13,7 @@ import 'sanitize.css/sanitize.css'
 import App from './App'
 
 //* Service Worker
-import * as serviceWorker from './serviceWorker'
+// import * as serviceWorker from './serviceWorker'
 
 //* LogRocket Initialization
 LogRocket.init('ic2caa/2020-portfolio')
@@ -27,4 +27,4 @@ ReactDOM.render(
   document.getElementById('root'),
 )
 
-serviceWorker.register()
+// serviceWorker.register()

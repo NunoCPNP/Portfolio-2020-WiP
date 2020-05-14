@@ -14,15 +14,22 @@ export const Wrapper = styled('div')`
   }
 
   span {
+    position: relative;
     text-shadow: 0px 2px 2px ${darkBlue};
-    letter-spacing: 1px;
-    background-image: linear-gradient(
-      transparent 0%,
-      transparent calc(50% - 0.7rem),
-      ${yellow} calc(50% - 0.7rem),
-      ${yellow} 100%
-    );
-    background-size: 100% 200%;
     padding: 0 0.2rem;
+    z-index: 1;
+  }
+
+  span::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -0.2rem;
+    left: 0;
+    height: 1.1rem;
+    width: 100%;
+    background: ${yellow};
+    z-index: -1;
+    border-radius: 0.2rem;
   }
 `
