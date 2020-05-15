@@ -2,7 +2,7 @@ export const projects = [
   {
     id: '0000001',
     title: 'Plume Support',
-    cover: 'https://np-portfolio2020.s3.eu-west-2.amazonaws.com/assets/original_plume_cardsize.webp',
+    cover: 'https://www.nunopereira.tech/assets/original_plume_cardsize.webp',
     description: 'Plume Support website built with ...',
     usedTechnology: ['ZenDesk', 'HTML', 'SCSS', 'JavaScript'],
     publicCode: false,
