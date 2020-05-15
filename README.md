@@ -17,7 +17,10 @@
 </div>
 
 <h1 align="center">
-  Nuno Pereira | Portfolio 2020 
+  Nuno Pereira | Portfolio 2020
+
+![WIP](./src/assets/Preview.jpg)
+
 </h1>
 
 Working on it ... :)
