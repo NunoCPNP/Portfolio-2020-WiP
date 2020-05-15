@@ -10,15 +10,19 @@
 </div>
 <div align="center">
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b84727a5-382f-4c72-acb0-b4e9b358f98b/deploy-status)](https://app.netlify.com/sites/np2020/deploys)
 ![LastCommit](https://img.shields.io/github/last-commit/nunocpnp/Portfolio-2020-WiP)
 ![Issues](https://img.shields.io/github/issues/NunoCPNP/Portfolio-2020-WiP)
+
+</div>
+<div align="center">
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b84727a5-382f-4c72-acb0-b4e9b358f98b/deploy-status)](https://app.netlify.com/sites/np2020/deploys)
 
 </div>
 
 <h1 align="center">
   Nuno Pereira | Portfolio 2020
-
+ 
 ![WIP](./src/assets/Preview.jpg)
 
 </h1>
