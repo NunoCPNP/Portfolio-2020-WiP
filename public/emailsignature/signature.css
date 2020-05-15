@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&display=swap");
+
+:root {
+  --main-color: #262533;
+  --main-background-color: #f9cc41;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Exo 2", sans-serif;
+}
+
+.signature::before {
+  content: "";
+  display: block;
+  border-top: 3px solid var(--main-color);
+  width: 2rem;
+  margin-bottom: 0.2rem;
+}
+
+.signature__title {
+  color: var(--main-color);
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+.signature__title--name {
+  font-size: 2.2rem;
+}
+
+.signature__title--title {
+  font-size: 1.2rem;
+}
+
+.signature__links {
+  display: block;
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+.signature__links::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: var(--main-background-color);
+  left: 0.4rem;
+  width: 26.5rem;
+  height: 1.8rem;
+  border-radius: 0.2rem;
+  z-index: -1;
+}
+
+.signature__links img {
+  width: 3rem;
+  padding-right: 0.3rem;
+}
+
+.signature__links--www {
+  text-decoration: none;
+  color: var(--main-color);
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.3em;
+  padding-left: 0.5rem;
+}
