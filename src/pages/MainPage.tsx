@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { StoreInterface } from '../store/interface'
 
-import CTA from '../sections/CTA'
+import CTA from '../sections/CTA/CTA'
 import About from '../sections/About'
 import Projects from '../sections/Projects'
 import Contacts from '../sections/Contacts'

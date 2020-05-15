@@ -3,7 +3,7 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import { StoreInterface } from '../../store/interface'
 
-import BlogButton from './BlogButton'
+import BlogButton from '../buttons/BlogButton'
 
 import { UList, StyledAnchor, StyledLink } from './MenuItems.styles'
 

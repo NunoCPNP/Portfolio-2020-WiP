@@ -11,7 +11,9 @@ type Props = {
 const SectionTitle: React.FC<Props> = ({ title, subTitle, uppercase }) => {
   return (
     <Wrapper>
-      <h2>{uppercase ? title.toUpperCase() : uppercase}</h2>
+      <span>
+        <h2>{uppercase ? title.toUpperCase() : uppercase}</h2>
+      </span>
       <h4>{subTitle}</h4>
     </Wrapper>
   )
