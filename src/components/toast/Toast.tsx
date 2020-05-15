@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Wrapper, Container } from './Notifications.styles'
+import { Wrapper, Container } from './Toast.styles'
 
 import closeAction from '../../assets/close.svg'
 

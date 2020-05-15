@@ -1,6 +1,6 @@
-import styled from '../themes/theme'
+import styled from '../../themes/theme'
 
-import { yellow } from '../styles/colors'
+import { yellow } from '../../styles/colors'
 
 export const SectionWrapper = styled('section')`
   padding-top: 5rem;
