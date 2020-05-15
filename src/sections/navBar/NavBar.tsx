@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
-import BrandIcon from './BrandIcon'
-import BurgerIcon from './BurgerIcon'
-import MenuItems from './MenuItems'
+import BrandIcon from '../../components/brandIcon/BrandIcon'
+import BurgerIcon from '../../components/burgerIcon/BurgerIcon'
+import MenuItems from '../../components/menuItem/MenuItems'
 
 import { StyledBar, NavBarBrand, NavBarIcon } from './NavBar.styles'
 

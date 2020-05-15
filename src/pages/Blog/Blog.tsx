@@ -1,21 +1,22 @@
 import React, { useEffect } from 'react'
 
 import { useDispatch, useSelector } from 'react-redux'
-import { setCurrentUser } from '../store/user/actions'
-import { StoreInterface } from '../store/interface'
+import { setControllers } from '../../store/controllers/actions'
+import { setCurrentUser } from '../../store/user/actions'
+import { StoreInterface } from '../../store/interface'
 
-import BlogBar from '../components/blogBar/BlogBar'
+import BlogBar from '../../components/blogBar/BlogBar'
 
-import { setControllers } from '../store/controllers/actions'
+import { PageWrapper, ComingSoon } from './Blog.styles'
 
-import { PageWrapper } from './Blog.styles'
-
-import { auth } from '../firebase/firebase'
+import { auth } from '../../firebase/firebase'
 
 type Props = {}
 
 const Blog: React.FC<Props> = () => {
   const dispatch = useDispatch()
+
+  const controllers = useSelector((state: StoreInterface) => state.controllers)
 
   //* Google OAuth Listener
   useEffect(() => {
@@ -27,8 +28,6 @@ const Blog: React.FC<Props> = () => {
     }
   })
 
-  const controllers = useSelector((state: StoreInterface) => state.controllers)
-
   useEffect(() => {
     controllers.appControllers.completeMenu = false
     dispatch(setControllers({ ...controllers }))
@@ -38,7 +37,9 @@ const Blog: React.FC<Props> = () => {
   return (
     <PageWrapper>
       <BlogBar />
-      <div>Hello from Blog Page</div>
+      <ComingSoon>
+        <div>Hello from Blog Page</div>
+      </ComingSoon>
     </PageWrapper>
   )
 }

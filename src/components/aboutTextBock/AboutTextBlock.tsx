@@ -6,7 +6,7 @@ type Props = {}
 
 const AboutTextBlock: React.FC<Props> = () => {
   return (
-    <Wrapper data-test="AboutTextBlock">
+    <Wrapper>
       <div>
         <p>
           I am a <span>JavaScript Developer</span> based in Portugal, focused on coding websites and applications using

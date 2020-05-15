@@ -14,12 +14,12 @@ import { useSelector } from 'react-redux'
 import { StoreInterface } from './store/interface'
 
 //* Component Imports
-import Notifications from './components/notifications/Notifications'
-import NavBar from './components/navBar/NavBar'
+import Toast from './components/toast/Toast'
+import NavBar from './sections/navBar/NavBar'
 import Loader from './components/loader/Loader'
 
 const MainPage = lazy(() => import('./pages/MainPage'))
-const Blog = lazy(() => import('./pages/Blog'))
+const Blog = lazy(() => import('./pages/Blog/Blog'))
 const Admin = lazy(() => import('./pages/Admin'))
 const NotFound = lazy(() => import('./pages/NotFound'))
 
@@ -48,7 +48,7 @@ const App: React.FC = () => {
               <Redirect to="/404" />
             </Switch>
           </Main>
-          {visible && <Notifications type={type} message={message} />}
+          {visible && <Toast type={type} message={message} />}
         </ThemeProvider>
       </Suspense>
       <GlobalStyles />
