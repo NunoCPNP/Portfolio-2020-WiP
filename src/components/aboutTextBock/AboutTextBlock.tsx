@@ -13,12 +13,13 @@ const AboutTextBlock: React.FC<Props> = () => {
           modern <span>HTML</span>, <span>CSS</span>, and <span>JavaScript</span>.
         </p>
         <p>
-          Building state-of-the-art, easy to use, user-friendly websites and applications is truly a passion of mine. I
-          actively seek out new technologies and stay up-to-date on industry trends and advancements.
+          Building <span>state-of-the-art</span>, <span>easy to use, user-friendly</span>
+          <span>websites and applications</span> is truly a passion of mine. I actively seek out new technologies and
+          stay <span>up-to-date</span> on industry trends and advancements.
         </p>
         <p>
-          Continued education allows me to stay ahead of the curve and deliver exceptional work to each employer I’ve
-          worked for - both full-time and contract.
+          <span>Continued education</span> allows me to stay <span>ahead of the curve</span> and deliver <span>exceptional
+          work</span> to each employer I’ve worked for - both full-time and contract.
         </p>
       </div>
     </Wrapper>

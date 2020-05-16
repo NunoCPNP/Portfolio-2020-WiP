@@ -2,7 +2,7 @@ export const projects = [
   {
     id: '0000001',
     title: 'Plume Support',
-    cover: 'https://np-portfolio2020.s3.eu-west-2.amazonaws.com/assets/original_plume_cardsize.webp',
+    cover: 'https://www.nunopereira.tech/assets/original_plume_cardsize.webp',
     description: 'Plume Support website built with ...',
     usedTechnology: ['ZenDesk', 'HTML', 'SCSS', 'JavaScript'],
     publicCode: false,
@@ -13,7 +13,7 @@ export const projects = [
   {
     id: '0000002',
     title: 'Plume Support',
-    cover: 'https://np-portfolio2020.s3.eu-west-2.amazonaws.com/assets/original_ageas_cardsize.webp',
+    cover: 'https://npaws.s3.eu-west-2.amazonaws.com/port2020/original_ageas_cardsize.webp',
     description: 'Plume Support website built with ...',
     usedTechnology: ['ZenDesk', 'HTML', 'SCSS', 'JavaScript'],
     publicCode: false,
@@ -24,7 +24,7 @@ export const projects = [
   {
     id: '0000003',
     title: 'Plume Support',
-    cover: 'https://np-portfolio2020.s3.eu-west-2.amazonaws.com/assets/original_plume_cardsize.webp',
+    cover: 'https://npaws.s3.eu-west-2.amazonaws.com/port2020/original_plume_cardsize.webp',
     description: 'Plume Support website built with ...',
     usedTechnology: ['ZenDesk', 'HTML', 'SCSS', 'JavaScript'],
     publicCode: false,
@@ -35,7 +35,7 @@ export const projects = [
   {
     id: '0000004',
     title: 'Plume Support',
-    cover: 'https://np-portfolio2020.s3.eu-west-2.amazonaws.com/assets/original_movieproject_cardsize.webp',
+    cover: 'https://npaws.s3.eu-west-2.amazonaws.com/port2020/original_movieproject_cardsize.webp',
     description: 'Plume Support website built with ...',
     usedTechnology: ['ZenDesk', 'HTML', 'SCSS', 'JavaScript'],
     publicCode: false,
