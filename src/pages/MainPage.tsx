@@ -4,7 +4,7 @@ import { StoreInterface } from '../store/interface'
 
 import CTA from '../sections/CTA/CTA'
 import About from '../sections/About'
-import Projects from '../sections/Projects'
+import Projects from '../sections/projects/Projects'
 import Contacts from '../sections/Contacts'
 
 import { setControllers } from '../store/controllers/actions'

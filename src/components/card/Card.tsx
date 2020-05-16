@@ -6,7 +6,7 @@ import { CardWrapper } from './Card.styles'
 type Props = {
   image: string
   alt: string
-  select?: () => void
+  select?: (arg: any) => void
 }
 
 const Card: React.FC<Props> = ({ image, alt, select }) => {
