@@ -4,7 +4,7 @@ import { initialState } from './initialState'
 import { reducer } from './reducer'
 
 const controllersContext = createContext(initialState)
-controllersContext.displayName = 'UserContext'
+controllersContext.displayName = 'ControllersContext'
 
 const { Provider } = controllersContext
 

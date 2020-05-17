@@ -1,25 +1,18 @@
-import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { StoreInterface } from '../store/interface'
+import React, { useContext, useEffect } from 'react'
+
+import { controllersContext } from '../context/controllers/context'
 
 import CTA from '../sections/CTA/CTA'
 import About from '../sections/about/About'
 import Projects from '../sections/projects/Projects'
 import Contacts from '../sections/contacts/Contacts'
 
-import { setControllers } from '../store/controllers/actions'
-
-type Props = {}
-
-const MainPage: React.FC<Props> = () => {
-  const dispatch = useDispatch()
-
-  const controllers = useSelector((state: StoreInterface) => state.controllers)
+const MainPage: React.FC = () => {
+  const controllers = useContext(controllersContext)
+  const { dispatch } = controllers
 
   useEffect(() => {
-    controllers.appControllers.completeMenu = true
-    dispatch(setControllers({ ...controllers }))
-    // eslint-disable-next-line
+    dispatch({ type: 'SET_MENU' })
   }, [])
 
   return (

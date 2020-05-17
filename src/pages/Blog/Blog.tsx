@@ -1,10 +1,7 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 
+import { controllersContext } from '../../context/controllers/context'
 import { UserStateProvider } from '../../context/user/context'
-
-import { useDispatch, useSelector } from 'react-redux'
-import { setControllers } from '../../store/controllers/actions'
-import { StoreInterface } from '../../store/interface'
 
 import BlogBar from '../../components/blogBar/BlogBar'
 
@@ -15,24 +12,11 @@ import { PageWrapper, ComingSoon } from './Blog.styles'
 type Props = {}
 
 const Blog: React.FC<Props> = () => {
-  const dispatch = useDispatch()
-
-  const controllers = useSelector((state: StoreInterface) => state.controllers)
-
-  //* Google OAuth Listener
-  // useEffect(() => {
-  //   const googleListen = auth.onAuthStateChanged((authUser: any) => {
-  //     authUser ? dispatch(setCurrentUser(authUser)) : dispatch(setCurrentUser(null))
-  //   })
-  //   return () => {
-  //     googleListen()
-  //   }
-  // })
+  const controllers = useContext(controllersContext)
+  const { dispatch } = controllers
 
   useEffect(() => {
-    controllers.appControllers.completeMenu = false
-    dispatch(setControllers({ ...controllers }))
-    // eslint-disable-next-line
+    dispatch({ type: 'TOGGLE_MENU' })
   }, [])
 
   return (

@@ -18,8 +18,8 @@ const AboutTextBlock: React.FC<Props> = () => {
           stay <span>up-to-date</span> on industry trends and advancements.
         </p>
         <p>
-          <span>Continued education</span> allows me to stay <span>ahead of the curve</span> and deliver <span>exceptional
-          work</span> to each employer I’ve worked for - both full-time and contract.
+          <span>Continued education</span> allows me to stay <span>ahead of the curve</span> and deliver{' '}
+          <span>exceptional work</span> to each employer I’ve worked for - both full-time and contract.
         </p>
       </div>
     </Wrapper>

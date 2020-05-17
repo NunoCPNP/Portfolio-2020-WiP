@@ -1,14 +1,6 @@
-interface InitialStateInterface {
-  darkMode: boolean
-  notifications: {
-    visible: boolean
-    type: null | 'warning' | 'error' | 'sucess'
-    message: null | string
-  }
-}
-
-export const initialState: InitialStateInterface = {
+export const initialState: any = {
   darkMode: true,
+  mainMenu: true,
   notifications: {
     visible: false,
     type: null,

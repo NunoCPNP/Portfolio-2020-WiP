@@ -1,8 +1,17 @@
-export const reducer = (state: any, action: any) => {
+import { StateInterface, ActionInterface } from './interfaces'
+
+export const reducer = (state: StateInterface, action: ActionInterface) => {
   switch (action.type) {
-    case 'SAMPLE':
+    case 'TOGGLE_MENU':
       return {
         ...state,
+        mainMenu: !state.mainMenu,
+      }
+
+    case 'SET_MENU':
+      return {
+        ...state,
+        mainMenu: true,
       }
 
     default:

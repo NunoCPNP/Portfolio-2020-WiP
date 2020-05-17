@@ -2,31 +2,23 @@ import React, { Suspense, lazy } from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
 
-//* Styled Components Imports
+//* Emotion Imports
 import { ThemeProvider } from 'emotion-theming'
 import { darkTheme } from './themes/darkTheme'
 import { darkBlue } from './styles/colors'
 import GlobalStyles from './styles/GlobalStyles'
 import styled from './themes/theme'
 
-//* Redux Imports
-import { useSelector } from 'react-redux'
-import { StoreInterface } from './store/interface'
-
 //* Component Imports
-import Toast from './components/toast/Toast'
 import NavBar from './sections/navBar/NavBar'
 import Loader from './components/loader/Loader'
+// import Toast from './components/toast/Toast'
 
 const MainPage = lazy(() => import('./pages/MainPage'))
 const Blog = lazy(() => import('./pages/Blog/Blog'))
 const NotFound = lazy(() => import('./pages/notFound/NotFound'))
 
 const App: React.FC = () => {
-  const { message, type, visible } = useSelector(
-    (state: StoreInterface) => state.controllers.appControllers.notifications,
-  )
-
   return (
     <>
       <Helmet>
@@ -46,7 +38,7 @@ const App: React.FC = () => {
               <Redirect to="/404" />
             </Switch>
           </Main>
-          {visible && <Toast type={type} message={message} />}
+          {/* {visible && <Toast type={type} message={message} />} */}
         </ThemeProvider>
       </Suspense>
       <GlobalStyles />

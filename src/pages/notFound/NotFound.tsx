@@ -1,25 +1,17 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 
-//* Redux Imports
-import { useDispatch, useSelector } from 'react-redux'
-import { StoreInterface } from '../../store/interface'
-import { setControllers } from '../../store/controllers/actions'
+import { controllersContext } from '../../context/controllers/context'
 
 import NotFoundImage from '../../assets/NotFound.svg'
 
 import { Section, Container } from './NotFound.styles'
 
-type Props = {}
-
-const NotFound: React.FC<Props> = () => {
-  const dispatch = useDispatch()
-
-  const controllers = useSelector((state: StoreInterface) => state.controllers)
+const NotFound: React.FC = () => {
+  const controllers = useContext(controllersContext)
+  const { dispatch } = controllers
 
   useEffect(() => {
-    controllers.appControllers.completeMenu = false
-    dispatch(setControllers({ ...controllers }))
-    // eslint-disable-next-line
+    dispatch({ type: 'TOGGLE_MENU' })
   }, [])
 
   return (
