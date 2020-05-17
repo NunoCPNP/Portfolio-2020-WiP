@@ -3,9 +3,7 @@ import ReactDOM from 'react-dom'
 import LogRocket from 'logrocket'
 import { BrowserRouter } from 'react-router-dom'
 
-//* Redux Imports
-import { Provider } from 'react-redux'
-import store from './store/store'
+import { ControllersStateProvider } from './context/controllers/context'
 
 //* CSS Normalization
 import 'sanitize.css/sanitize.css'
@@ -13,18 +11,18 @@ import 'sanitize.css/sanitize.css'
 import App from './App'
 
 //* Service Worker
-// import * as serviceWorker from './serviceWorker'
+import * as serviceWorker from './serviceWorker'
 
 //* LogRocket Initialization
 LogRocket.init('ic2caa/2020-portfolio')
 
 ReactDOM.render(
-  <Provider store={store}>
+  <ControllersStateProvider>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </Provider>,
+  </ControllersStateProvider>,
   document.getElementById('root'),
 )
 
-// serviceWorker.register()
+serviceWorker.register()

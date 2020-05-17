@@ -1,6 +1,6 @@
-import styled from '../themes/theme'
+import styled from '../../themes/theme'
 
-import { yellow, white } from '../styles/colors'
+import { yellow, white } from '../../styles/colors'
 
 export const Section = styled('section')`
   display: flex;

@@ -1,8 +1,7 @@
 <div align="center">
 
 ![React](https://img.shields.io/github/package-json/dependency-version/NunoCPNP/Portfolio-2020-WiP/react?filename=package.json)
-![Redux](https://img.shields.io/github/package-json/dependency-version/NunoCPNP/Portfolio-2020-WiP/redux?filename=package.json)
-![Typescript](https://img.shields.io/badge/typescript-%5E3.8.3-blue)
+![Typescript](https://img.shields.io/badge/typescript-%5E3.9.2-blue)
 ![React-Router-Dom](https://img.shields.io/github/package-json/dependency-version/NunoCPNP/Portfolio-2020-WiP/react-router-dom?filename=package.json)
 ![Framer Motion](https://img.shields.io/github/package-json/dependency-version/NunoCPNP/Portfolio-2020-WiP/framer-motion?filename=package.json)
 ![Emotion](https://img.shields.io/github/package-json/dependency-version/NunoCPNP/Portfolio-2020-WiP/@emotion/styled?filename=package.json&label=emotion)

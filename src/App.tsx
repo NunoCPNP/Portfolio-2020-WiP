@@ -20,8 +20,7 @@ import Loader from './components/loader/Loader'
 
 const MainPage = lazy(() => import('./pages/MainPage'))
 const Blog = lazy(() => import('./pages/Blog/Blog'))
-const Admin = lazy(() => import('./pages/Admin'))
-const NotFound = lazy(() => import('./pages/NotFound'))
+const NotFound = lazy(() => import('./pages/notFound/NotFound'))
 
 const App: React.FC = () => {
   const { message, type, visible } = useSelector(
@@ -43,7 +42,6 @@ const App: React.FC = () => {
             <Switch>
               <Route exact path="/" component={MainPage} />
               <Route exact path="/blog" component={Blog} />
-              <Route exact path="/admin" component={Admin} />
               <Route path="/404" component={NotFound} />
               <Redirect to="/404" />
             </Switch>

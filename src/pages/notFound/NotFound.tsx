@@ -2,10 +2,10 @@ import React, { useEffect } from 'react'
 
 //* Redux Imports
 import { useDispatch, useSelector } from 'react-redux'
-import { StoreInterface } from '../store/interface'
-import { setControllers } from '../store/controllers/actions'
+import { StoreInterface } from '../../store/interface'
+import { setControllers } from '../../store/controllers/actions'
 
-import NotFoundImage from '../assets/NotFound.svg'
+import NotFoundImage from '../../assets/NotFound.svg'
 
 import { Section, Container } from './NotFound.styles'
 
