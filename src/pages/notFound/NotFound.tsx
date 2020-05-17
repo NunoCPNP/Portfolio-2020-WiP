@@ -12,7 +12,7 @@ const NotFound: React.FC = () => {
 
   useEffect(() => {
     dispatch({ type: 'TOGGLE_MENU' })
-  }, [])
+  }, []) // eslint-disable-line
 
   return (
     <Section>

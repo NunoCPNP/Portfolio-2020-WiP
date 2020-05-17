@@ -1,9 +1,7 @@
 import React from 'react'
 import { Section, Wrapper, Shadow, Box } from './Loader.styles'
 
-type Props = {}
-
-const Loader: React.FC<Props> = () => {
+const Loader: React.FC = () => {
   return (
     <Section>
       <Wrapper>

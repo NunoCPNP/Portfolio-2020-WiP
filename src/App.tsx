@@ -14,8 +14,8 @@ import NavBar from './sections/navBar/NavBar'
 import Loader from './components/loader/Loader'
 // import Toast from './components/toast/Toast'
 
-const MainPage = lazy(() => import('./pages/MainPage'))
-const Blog = lazy(() => import('./pages/Blog/Blog'))
+const MainPage = lazy(() => import('./pages/main/MainPage'))
+const Blog = lazy(() => import('./pages/blog/Blog'))
 const NotFound = lazy(() => import('./pages/notFound/NotFound'))
 
 const App: React.FC = () => {

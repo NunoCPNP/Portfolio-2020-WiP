@@ -6,9 +6,7 @@ import { SectionWrapper, CTAText, ButtonsContainer } from './CTA.styles'
 
 import ctaImage from '../../assets/ctaSVG.svg'
 
-type Props = {}
-
-const CTA: React.FC<Props> = () => {
+const CTA: React.FC = () => {
   return (
     <SectionWrapper id="Home">
       <img src={ctaImage} alt="" />

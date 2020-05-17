@@ -2,9 +2,7 @@ import React from 'react'
 
 import { Wrapper } from './ThemeToggler.styles'
 
-type Props = {}
-
-const ThemeToggler: React.FC<Props> = () => {
+const ThemeToggler: React.FC = () => {
   return <Wrapper></Wrapper>
 }
 

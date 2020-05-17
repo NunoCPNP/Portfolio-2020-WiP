@@ -2,9 +2,7 @@ import React, { useRef } from 'react'
 
 import { FormWrapper, StyledDiv } from './ContactForm.styles'
 
-type Props = {}
-
-const ContactForm: React.FC<Props> = () => {
+const ContactForm: React.FC = () => {
   const nameRef = useRef<HTMLInputElement>(null)
   const emailRef = useRef<HTMLInputElement>(null)
   const contactRef = useRef<HTMLInputElement>(null)
@@ -14,19 +12,15 @@ const ContactForm: React.FC<Props> = () => {
   const nameKeyDown = (e: any) => {
     if (e.key === 'Enter') emailRef.current?.focus()
   }
-
   const emailKeyDown = (e: any) => {
     if (e.key === 'Enter') contactRef.current?.focus()
   }
-
   const contactKeyDown = (e: any) => {
     if (e.key === 'Enter') messageRef.current?.focus()
   }
-
   const messageKeyDown = (e: any) => {
     if (e.key === 'Enter') buttonRef.current?.focus()
   }
-
   const handleFormSubmit = (e: any) => {
     e.preventDefault()
   }

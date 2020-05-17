@@ -6,9 +6,7 @@ import MenuItems from '../../components/menuItem/MenuItems'
 
 import { StyledBar, NavBarBrand, NavBarIcon } from './NavBar.styles'
 
-type Props = {}
-
-const Header: React.FC<Props> = () => {
+const Header: React.FC = () => {
   const [toggle, setToggle] = useState(false)
 
   return (

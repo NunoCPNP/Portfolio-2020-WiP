@@ -6,9 +6,7 @@ import ContactForm from '../../components/contactForm/ContactForm'
 
 import { Section } from './Contacts.styles'
 
-type Props = {}
-
-const Contacts: React.FC<Props> = () => {
+const Contacts: React.FC = () => {
   return (
     <Section id="Contacts">
       <SectionTitle title="Contacts" subTitle="Have a question or want to work together ?" uppercase />

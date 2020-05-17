@@ -6,9 +6,7 @@ import OneColumnGrid from '../../components/grids/OneColumnGrid'
 
 import { Section } from './About.styles'
 
-type Props = {}
-
-const About: React.FC<Props> = () => {
+const About: React.FC = () => {
   return (
     <Section id="About">
       <SectionTitle uppercase title="About" />

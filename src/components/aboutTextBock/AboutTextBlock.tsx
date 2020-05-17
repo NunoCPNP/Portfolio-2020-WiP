@@ -2,9 +2,7 @@ import React from 'react'
 
 import { Wrapper } from './AboutTextBlock.styles'
 
-type Props = {}
-
-const AboutTextBlock: React.FC<Props> = () => {
+const AboutTextBlock: React.FC = () => {
   return (
     <Wrapper>
       <div>

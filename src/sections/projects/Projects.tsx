@@ -8,9 +8,7 @@ import Card from '../../components/card/Card'
 
 import { Section } from './Projects.styles'
 
-type Props = {}
-
-const Projects: React.FC<Props> = () => {
+const Projects: React.FC = () => {
   const { state, dispatch } = useFetchProjects()
 
   return (

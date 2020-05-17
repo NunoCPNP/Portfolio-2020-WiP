@@ -1,24 +1,27 @@
-import React from 'react'
+import React, { useContext } from 'react'
+
+import { userContext } from '../../context/user/context'
 
 import { signInWithGoogle, auth } from '../../firebase/firebase'
 
 import { BarWrapper, StyledP, Button } from './BlogBar.styles'
 
-type Props = {}
+const BlogBar: React.FC = () => {
+  const users = useContext(userContext)
+  const { loggedIn, user } = users.state
 
-const BlogBar: React.FC<Props> = () => {
   return (
     <BarWrapper>
-      {/* {currentUser ? (
+      {loggedIn ? (
         <>
           <StyledP>
-            Hi <span>{currentUser.displayName}</span>
+            Hi <span>{user.displayName}</span>
           </StyledP>
           <Button onClick={() => auth.signOut()}>Logout</Button>
         </>
       ) : (
         <Button onClick={signInWithGoogle}>Login</Button>
-      )} */}
+      )}
     </BarWrapper>
   )
 }

@@ -1,3 +1,4 @@
-interface InitialStateInterface {}
-
-export const initialState: InitialStateInterface = {}
+export const initialState: any = {
+  loggedIn: false,
+  user: null,
+}

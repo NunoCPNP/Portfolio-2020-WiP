@@ -7,17 +7,13 @@ import BlogBar from '../../components/blogBar/BlogBar'
 
 import { PageWrapper, ComingSoon } from './Blog.styles'
 
-// import { auth } from '../../firebase/firebase'
-
-type Props = {}
-
-const Blog: React.FC<Props> = () => {
+const Blog: React.FC = () => {
   const controllers = useContext(controllersContext)
   const { dispatch } = controllers
 
   useEffect(() => {
     dispatch({ type: 'TOGGLE_MENU' })
-  }, [])
+  }, []) // eslint-disable-line
 
   return (
     <UserStateProvider>
