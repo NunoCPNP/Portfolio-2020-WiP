@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 
 import { userContext } from '../../context/user/context'
 
+import { useAuth } from '../../api/useAuth'
 import { signInWithGoogle, auth } from '../../firebase/firebase'
 
 import { BarWrapper, StyledP, Button } from './BlogBar.styles'
@@ -9,6 +10,8 @@ import { BarWrapper, StyledP, Button } from './BlogBar.styles'
 const BlogBar: React.FC = () => {
   const users = useContext(userContext)
   const { loggedIn, user } = users.state
+
+  useAuth()
 
   return (
     <BarWrapper>

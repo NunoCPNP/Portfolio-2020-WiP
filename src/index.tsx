@@ -4,6 +4,7 @@ import LogRocket from 'logrocket'
 import { BrowserRouter } from 'react-router-dom'
 
 import { ControllersStateProvider } from './context/controllers/context'
+import { UserStateProvider } from './context/user/context'
 
 //* CSS Normalization
 import 'sanitize.css/sanitize.css'
@@ -18,9 +19,11 @@ LogRocket.init('ic2caa/2020-portfolio')
 
 ReactDOM.render(
   <ControllersStateProvider>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <UserStateProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </UserStateProvider>
   </ControllersStateProvider>,
   document.getElementById('root'),
 )
