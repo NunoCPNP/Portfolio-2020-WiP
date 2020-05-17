@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 
 import { userContext } from '../../context/user/context'
 
-import { useAuth } from '../../api/useAuth'
+import { useAuth } from '../../firebase/useAuth'
 import { signInWithGoogle, auth } from '../../firebase/firebase'
 
 import { BarWrapper, StyledP, Button } from './BlogBar.styles'

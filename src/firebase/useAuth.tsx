@@ -6,7 +6,7 @@ import { auth } from '../firebase/firebase'
 
 export const useAuth = () => {
   const user = useContext(userContext)
-  const { dispatch, state } = user
+  const { dispatch } = user
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((authUser: any) => {
@@ -14,5 +14,5 @@ export const useAuth = () => {
     })
 
     return () => unsubscribe()
-  }, [])
+  }, []) // eslint-disable-line
 }
