@@ -1,8 +1,17 @@
-export const reducer = (state: any, action: any) => {
+import { StateInterface, ActionInterface } from './interfaces'
+
+export const reducer = (state: StateInterface, action: ActionInterface) => {
   switch (action.type) {
-    case 'SAMPLE':
+    case 'USER_LOGIN':
       return {
-        ...state,
+        loggedIn: true,
+        user: action.payload,
+      }
+
+    case 'USER_LOGOUT':
+      return {
+        loggedIn: false,
+        user: null,
       }
 
     default:
