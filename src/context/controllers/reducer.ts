@@ -2,10 +2,16 @@ import { StateInterface, ActionInterface } from './interfaces'
 
 export const reducer = (state: StateInterface, action: ActionInterface) => {
   switch (action.type) {
-    case 'TOGGLE_MENU':
+    case 'SET_MENU_TRUE':
       return {
         ...state,
-        mainMenu: !state.mainMenu,
+        mainMenu: true,
+      }
+
+    case 'SET_MENU_FALSE':
+      return {
+        ...state,
+        mainMenu: false,
       }
 
     default:

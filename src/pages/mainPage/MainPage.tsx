@@ -13,7 +13,7 @@ const MainPage: React.FC = () => {
 
   useEffect(() => {
     if (!state.mainMenu) {
-      dispatch({ type: 'SET_MENU' })
+      dispatch({ type: 'SET_MENU_TRUE' })
     }
   }, []) // eslint-disable-line
 

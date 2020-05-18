@@ -9,6 +9,6 @@ export interface StateInterface {
 }
 
 export interface ActionInterface {
-  type: 'TOGGLE_MENU'
+  type: 'SET_MENU_TRUE' | 'SET_MENU_FALSE'
   payload: any
 }

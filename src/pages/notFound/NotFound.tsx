@@ -11,7 +11,7 @@ const NotFound: React.FC = () => {
   const { dispatch } = controllers
 
   useEffect(() => {
-    dispatch({ type: 'TOGGLE_MENU' })
+    dispatch({ type: 'SET_MENU_FALSE' })
   }, []) // eslint-disable-line
 
   return (
