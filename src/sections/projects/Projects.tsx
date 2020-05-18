@@ -11,9 +11,8 @@ import { Section } from './Projects.styles'
 
 const Projects: React.FC = () => {
   const { state, dispatch } = useFetchProjects()
-  const { projects, project } = state
+  const { projects, project, loading } = state
 
-  console.log(project)
   return (
     <Section id="Projects">
       <SectionTitle
@@ -21,7 +20,7 @@ const Projects: React.FC = () => {
         title="My Latest Projects"
         subTitle="Some of the latest Projects I have been working on"
       />
-      {projects && (
+      {!loading && (
         <>
           {!project ? (
             <OneColumnGrid items={4} breakTo={2} gap={4} maxWidth={120} padding={4}>
@@ -38,7 +37,7 @@ const Projects: React.FC = () => {
             <>
               <OneColumnGrid items={4} breakTo={2} gap={4} maxWidth={120} padding={4}>
                 <Card image={project.data.cover.url} alt={project.data.alt} />
-                <ProjectDetails />
+                <ProjectDetails project={project} />
               </OneColumnGrid>
             </>
           )}

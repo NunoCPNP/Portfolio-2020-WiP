@@ -14,7 +14,7 @@ import NavBar from './sections/navBar/NavBar'
 import Loader from './components/loader/Loader'
 // import Toast from './components/toast/Toast'
 
-const MainPage = lazy(() => import('./pages/main/MainPage'))
+const MainPage = lazy(() => import('./pages/mainPage/MainPage'))
 const Blog = lazy(() => import('./pages/blog/Blog'))
 const NotFound = lazy(() => import('./pages/notFound/NotFound'))
 
