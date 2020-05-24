@@ -3,7 +3,7 @@ import styled from '../../themes/theme'
 import { yellow, white } from '../../styles/colors'
 
 export const FormWrapper = styled.div`
-  & button {
+  button {
     cursor: pointer;
     margin-top: 2rem;
     background: none;

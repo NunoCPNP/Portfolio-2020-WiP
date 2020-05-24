@@ -20,6 +20,7 @@ const reducer = (state: any, action: any) => {
         ...state,
         projects: action.payload,
         loading: false,
+        error: false,
       }
 
     case 'SET_PROJECT':
@@ -28,6 +29,12 @@ const reducer = (state: any, action: any) => {
       return {
         ...state,
         project: filteredProject,
+      }
+
+    case 'SET_ERROR':
+      return {
+        ...state,
+        error: true,
       }
 
     case 'RESET_PROJECT':
@@ -46,12 +53,17 @@ export const useFetchProjects = () => {
 
   useEffect(() => {
     const fetchProjects = async () => {
-      const response = await Client.query(Prismic.Predicates.at('document.type', 'projects'))
+      try {
+        const response = await Client.query(Prismic.Predicates.at('document.type', 'projects'))
 
-      if (response) {
-        dispatch({ type: 'FETCH_PROJECTS', payload: response.results })
+        if (response) {
+          dispatch({ type: 'FETCH_PROJECTS', payload: response.results })
+        }
+      } catch {
+        dispatch({ type: 'SET_ERROR' })
       }
     }
+
     fetchProjects()
   }, [])
 
