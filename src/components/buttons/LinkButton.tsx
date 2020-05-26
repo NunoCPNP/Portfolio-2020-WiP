@@ -1,17 +1,21 @@
 import React from 'react'
 
-import { Container, Button } from './LinkButton.styles'
+import { Button } from './LinkButton.styles'
 
-const LinkButton: React.FC = () => {
+type Props = {
+  ref: any
+  type: 'submit'
+  label: string
+}
+
+const LinkButton: React.FC<Props> = ({ label }) => {
   return (
-    <Container>
-      <Button>
-        <span className="circle" aria-hidden="true">
-          <span className="icon arrow"></span>
-        </span>
-        <span className="button-text">Learn More</span>
-      </Button>
-    </Container>
+    <Button>
+      <span className="circle" aria-hidden="true">
+        <span className="icon arrow"></span>
+      </span>
+      <span className="button-text">{label}</span>
+    </Button>
   )
 }
 
