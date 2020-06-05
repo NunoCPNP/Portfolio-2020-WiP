@@ -28,7 +28,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.0",
     "redux-thunk": "^2.3.0",
-    "sanitize.css": "^11.0.0",
+    "sanitize.css": "^11.0.1",
     "typescript": "^3.9.5"
   },
   "scripts": {
